@@ -1,0 +1,28 @@
+.nav {
+  background-color: rgb(194, 221, 230, 0.4);
+  height: 50px;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: flex-end;
+  text-decoration: none;
+  border: none;
+}
+
+.nav p {
+  margin-right: 50px;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}

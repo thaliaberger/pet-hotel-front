@@ -25,11 +25,15 @@
 .about h2 {
   color: white;
   font-size: 40px;
+  text-shadow: 2px 1px 0px rgba(101, 150, 150, 1);
 }
 
 .about p {
   color: #4995a6;
   font-size: 20px;
+  background-color: rgb(239, 250, 255, 0.2);
+  border-radius: 25px;
+  padding: 30px;
 }
 
 .home-info {
@@ -60,6 +64,8 @@
   margin: 20px 100px 50px 0;
   width: 500px;
 }
+
+/* INPUTS E BOTOES */
 
 button:focus {
   box-shadow: 0 0 0 0;
@@ -104,54 +110,7 @@ select:focus {
   background: none;
 }
 
-.footer {
-  display: flex;
-  justify-content: center;
-  background-color: rgb(194, 221, 230, 0.4);
-  width: 100%;
-}
-
-.footer p {
-  color: #8bc4d6;
-}
-
-.pet-img {
-  width: 100px;
-  border-radius: 5px;
-  transition: 0.3s ease-in-out;
-}
-
-.client-pets {
-  display: flex;
-  justify-content: center;
-  height: 500px;
-}
-
-.client-pet {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(239, 250, 255, 0.2);
-  border-radius: 25px;
-  padding: 20px 20px;
-  margin: 50px 20px 0 20px;
-  height: 150px;
-  width: 150px;
-}
-
-.client-pet p {
-  color: #4995a6;
-  font-size: 15px;
-}
-
-.clients h2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 40px;
-}
+/* ESTRUTURA */
 
 .structure h2 {
   display: flex;
@@ -159,6 +118,7 @@ select:focus {
   align-items: center;
   color: white;
   font-size: 40px;
+  text-shadow: 2px 1px 0px rgba(101, 150, 150, 1);
 }
 
 .structure img {
@@ -169,5 +129,83 @@ select:focus {
 .structure-imgs {
   display: flex;
   justify-content: center;
-  margin: 150px 0;
+  margin: 60px 0 150px 0;
+}
+
+/* CLIENTES */
+
+.pet-img {
+  width: 150px;
+  border-radius: 5px;
+  filter: grayscale(90%);
+  transition: 0.3s ease-in-out;
+}
+
+.pet-img:hover {
+  filter: grayscale(0);
+}
+
+.client-pets {
+  display: flex;
+  justify-content: center;
+}
+
+.client-pet {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(239, 250, 255, 0.2);
+  border-radius: 25px;
+  padding: 40px 20px 30px 20px;
+  margin: 50px 20px 0 20px;
+  height: 150px;
+  width: 150px;
+}
+
+.client-pet p {
+  color: #4995a6;
+  font-size: 15px;
+}
+
+.clients {
+  margin-bottom: 100px;
+}
+
+.clients h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 40px;
+  text-shadow: 2px 1px 0px rgba(101, 150, 150, 1);
+}
+
+/* FOOTER */
+
+.footer {
+  background-color: rgb(194, 221, 230, 0.4);
+  width: 100%;
+}
+
+.footer p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #8bc4d6;
+  margin-top: 20px;
+}
+
+.footer-link {
+  text-decoration: none;
+  margin: 20px 30px;
+  color: #3d859b;
+  font-weight: bold;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }

@@ -2,15 +2,23 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Homepage.css";
 
+import Navbar from "./Navbar";
+
+import alceu from "../../images/alceu (2).jpeg";
+import lummy from "../../images/lummy.jpeg";
+import zoe from "../../images/zoe.jpeg";
+import earl from "../../images/earl.jpeg";
+import amora from "../../images/amora.jpeg";
+import cristoff from "../../images/cristoff.jpeg";
+import buzz from "../../images/buzz.jpg";
+import logo from "../../images/logo.png";
+
 function Homepage() {
   return (
     <div className="home">
+      <Navbar />
       <div className="home-container">
-        <img
-          className="logo"
-          src="https://i.ibb.co/ZYcbSj1/Design-sem-nome-4.png"
-          alt="logo"
-        />
+        <img className="logo" src={logo} alt="logo" />
         <div className="home-info">
           <input type="email" placeholder="Email" />
           <input type="password" placeholder="Senha" />
@@ -40,7 +48,6 @@ function Homepage() {
           animal.
         </p>
       </div>
-
       <div className="structure">
         <h2>Estrutura</h2>
 
@@ -50,43 +57,65 @@ function Homepage() {
           <img src="https://petshopcontrol.blob.core.windows.net/blog/blog/wp-content/uploads/hotel-cachorros-e-gatos.jpg" />
         </div>
       </div>
-
       <div className="clients">
         <h2>Clientes VIP</h2>
 
         <div className="client-pets">
           <div className="client-pet">
-            <img
-              className="pet-img"
-              src="https://i.ibb.co/Wgt1hL1/20181226-174724.jpg"
-            />
-            <p>Buzz</p>
+            <img className="pet-img" src={amora} />
+            <p>Amora</p>
           </div>
           <div className="client-pet">
-            <img
-              className="pet-img"
-              src="https://i.ibb.co/rw15P9Z/Whats-App-Image-2020-12-01-at-13-18-00.jpg"
-            />
+            <img className="pet-img" src={lummy} />
             <p>Lummy</p>
           </div>
           <div className="client-pet">
-            <img
-              className="pet-img"
-              src="https://i.ibb.co/3Svc7K4/Whats-App-Image-2020-12-03-at-20-08-29.jpg"
-            />
+            <img className="pet-img" src={alceu} />
             <p>Alceu</p>
+          </div>
+          <div className="client-pet">
+            <img className="pet-img" src={buzz} />
+            <p>Buzz</p>
+          </div>
+        </div>
+        <div className="client-pets">
+          <div className="client-pet">
+            <img className="pet-img" src={zoe} />
+            <p>Zoe</p>
+          </div>
+
+          <div className="client-pet">
+            <img className="pet-img" src={buzz} />
+            <p>Buzz</p>
+          </div>
+
+          <div className="client-pet">
+            <img className="pet-img" src={cristoff} />
+            <p>Cristoff</p>
+          </div>
+
+          <div className="client-pet">
+            <img className="pet-img" src={earl} />
+            <p>Earl</p>
           </div>
         </div>
       </div>
-
       <div className="footer">
         <footer>
           <p>
             Projeto desenvolvido para o bootcamp de Web Development da IRONHACK.
           </p>
-          <Link to="/">Rodrigo </Link>
-          <Link to="/">Laura </Link>
-          <Link to="/">Thalía</Link>
+          <div className="footer-links">
+            <Link className="footer-link" to="/">
+              Rodrigo Matos | GitHub
+            </Link>
+            <Link className="footer-link" to="/">
+              Laura Ferraz | GitHub
+            </Link>
+            <Link className="footer-link" to="/">
+              Thalía Berger | GitHub
+            </Link>
+          </div>
         </footer>
       </div>
     </div>
