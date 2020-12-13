@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+
 /* HOMEPAGE */
 
 .home {
@@ -23,9 +25,9 @@
 }
 
 .about h2 {
-  color: white;
+  color: #f4f4f4;
   font-size: 40px;
-  text-shadow: 2px 1px 0px rgba(101, 150, 150, 1);
+  text-shadow: 1px 1px 0px #d5e6eb;
 }
 
 .about p {
@@ -33,7 +35,7 @@
   font-size: 20px;
   background-color: rgb(239, 250, 255, 0.2);
   border-radius: 25px;
-  padding: 30px;
+  padding: 60px;
 }
 
 .home-info {
@@ -51,7 +53,7 @@
   padding: 10px;
   border: none;
   margin: 5px;
-  width: 250px;
+  width: 295px;
   border-radius: 15px;
 }
 
@@ -63,6 +65,28 @@
   display: flex;
   margin: 20px 100px 50px 0;
   width: 500px;
+}
+
+.signin {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 300px;
+  top: 150px;
+  right: 50%;
+  margin-right: -435px;
+  margin-top: 10px;
+}
+
+.signin button {
+  position: absolute;
+  top: 90px;
+  right: 50%;
+  margin-right: -53px;
+}
+
+.barra {
+  margin-top: 150px;
 }
 
 /* INPUTS E BOTOES */
@@ -112,24 +136,34 @@ select:focus {
 
 /* ESTRUTURA */
 
-.structure h2 {
+.structure {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
+}
+
+.structure h2 {
+  color: #f4f4f4;
   font-size: 40px;
-  text-shadow: 2px 1px 0px rgba(101, 150, 150, 1);
+  text-shadow: 1px 1px 0px #d5e6eb;
+  letter-spacing: 2px;
 }
 
 .structure img {
-  width: 350px;
-  margin: 0 30px;
+  height: 170px;
+  width: 320px;
+  margin: 0 40px;
 }
 
 .structure-imgs {
   display: flex;
   justify-content: center;
   margin: 60px 0 150px 0;
+  background-color: rgb(239, 250, 255, 0.2);
+  padding: 50px 30px;
+  border-radius: 25px;
+  width: 1150px;
 }
 
 /* CLIENTES */
@@ -176,9 +210,9 @@ select:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: #f4f4f4;
   font-size: 40px;
-  text-shadow: 2px 1px 0px rgba(101, 150, 150, 1);
+  text-shadow: 1px 1px 0px #d5e6eb;
 }
 
 /* FOOTER */
@@ -199,8 +233,9 @@ select:focus {
 .footer-link {
   text-decoration: none;
   margin: 20px 30px;
-  color: #3d859b;
+  color: #579cb1;
   font-weight: bold;
+  transition: 0.5s ease-in-out;
 }
 
 .footer-links {
@@ -208,4 +243,8 @@ select:focus {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+
+.footer-link:hover {
+  color: #0f4555;
 }

@@ -1,0 +1,53 @@
+.dash-container {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(194, 221, 230, 0.4);
+  line-height: 0.5;
+  width: 800px;
+  border-radius: 25px;
+  padding: 30px;
+}
+
+.dashboard img {
+  width: 150px;
+}
+
+.dashboard h2 {
+  color: #f4f4f4;
+  font-size: 25px;
+  text-shadow: 0.5px 1px 0px #d5e6eb;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+}
+
+.dashboard h4 {
+  color: #4995a6;
+}
+
+.dashboard p {
+  color: #4995a6;
+  font-size: 14px;
+}
+
+/* ABOUT */
+
+.sobre-humano {
+  width: 400px;
+  margin-bottom: 100px;
+}
+
+.sobre-pet {
+  width: 400px;
+}
+
+/* AGENDA */
+
+.agendamentos {
+  margin-bottom: 140px;
+}
