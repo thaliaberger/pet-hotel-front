@@ -3,21 +3,27 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "./App.css";
 
 import Homepage from "./components/homepage/Homepage";
-import Cadastro from "./components/cadastro/Cadastro";
+import Register from "./components/cadastro/Register";
 import CadastroPet from "./components/cadastro/CadastroPet";
+import Dashboard from "./components/dashboard/Dashboard";
+import { AuthContextComponent } from "./contexts/AuthContext";
+import PrivateRoute from "./routes/PrivateRoute";
 
 function App() {
-  return (
-    <div className="">
-      <BrowserRouter>
-        <Switch>
-          <Route exact path="/" component={Homepage} />
-          <Route exact path="/cadastro" component={Cadastro} />
-          <Route exact path="/cadastro/pet" component={CadastroPet} />
-        </Switch>
-      </BrowserRouter>
-    </div>
-  );
+	return (
+		<div className="">
+			<BrowserRouter>
+				<AuthContextComponent>
+					<Switch>
+						<Route exact path="/" component={Homepage} />
+						<Route exact path="/register" component={Register} />
+						<PrivateRoute exact path="/cadastro/pet" component={CadastroPet} />
+						<PrivateRoute exact path="/dashboard" component={Dashboard} />
+					</Switch>
+				</AuthContextComponent>
+			</BrowserRouter>
+		</div>
+	);
 }
 
 export default App;
