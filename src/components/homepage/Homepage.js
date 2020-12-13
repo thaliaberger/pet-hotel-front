@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./Homepage.css";
 
 import Navbar from "./Navbar";
+import SignIn from "./SignIn";
 
 import alceu from "../../images/alceu (2).jpeg";
 import lummy from "../../images/lummy.jpeg";
@@ -19,27 +20,10 @@ function Homepage() {
       <Navbar />
       <div className="home-container">
         <img className="logo" src={logo} alt="logo" />
-        <div className="home-info">
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Senha" />
-
-          <Link to="/">
-            <button type="submit" className="botao-laranja">
-              Entrar
-            </button>
-          </Link>
-          <p>———————————</p>
-
-          <small>
-            <p>Ainda não tem conta?</p>
-          </small>
-          <Link to="/cadastro">
-            <button className="botao-azul">Cadastre-se</button>
-          </Link>
-        </div>
+        <SignIn />
       </div>
       <div className="about">
-        <h2>O Hotel</h2>
+        <h2>O hotel</h2>
 
         <p>
           Um lugar para deixar seu pet com toda tranquilidade e segurança.
@@ -52,18 +36,9 @@ function Homepage() {
         <h2>Estrutura</h2>
 
         <div className="structure-imgs">
-          <img
-            src="https://petshopcontrol.blob.core.windows.net/blog/blog/wp-content/uploads/hotel-para-cachorros-e-gatos-1-768x432.jpg"
-            alt="hall"
-          />
-          <img
-            src="https://i.pinimg.com/600x315/23/cf/80/23cf8082d95427f027b95c3b6038b8d2.jpg"
-            alt="quartos"
-          />
-          <img
-            src="https://petshopcontrol.blob.core.windows.net/blog/blog/wp-content/uploads/hotel-cachorros-e-gatos.jpg"
-            alt="piscina"
-          />
+          <img src="https://petshopcontrol.blob.core.windows.net/blog/blog/wp-content/uploads/hotel-para-cachorros-e-gatos-1-768x432.jpg" />
+          <img src="https://petshopcontrol.blob.core.windows.net/blog/blog/wp-content/uploads/hotel-para-chorros-gatos.png" />
+          <img src="https://petshopcontrol.blob.core.windows.net/blog/blog/wp-content/uploads/hotel-cachorros-e-gatos.jpg" />
         </div>
       </div>
       <div className="clients">
@@ -71,47 +46,40 @@ function Homepage() {
 
         <div className="client-pets">
           <div className="client-pet">
-            <img className="pet-img" src={amora} alt="amora" />
+            <img className="pet-img" src={amora} />
             <p>Amora</p>
           </div>
           <div className="client-pet">
-            <img className="pet-img" src={lummy} alt="lummy" />
+            <img className="pet-img" src={lummy} />
             <p>Lummy</p>
           </div>
           <div className="client-pet">
-            <img className="pet-img" src={alceu} alt="alceu" />
+            <img className="pet-img" src={alceu} />
             <p>Alceu</p>
           </div>
           <div className="client-pet">
-            <img className="pet-img" src={buzz} alt="buzz" />
+            <img className="pet-img" src={buzz} />
             <p>Buzz</p>
-          </div>
-          <div className="client-pet">
-            <img className="pet-img" src={zoe} alt="zoe" />
-            <p>Zoe</p>
           </div>
         </div>
         <div className="client-pets">
           <div className="client-pet">
-            <img className="pet-img" src={christoff} alt="chris" />
-            <p>Christoff</p>
-          </div>
-          <div className="client-pet">
-            <img className="pet-img" src={earl} alt="earl" />
-            <p>Earl</p>
+            <img className="pet-img" src={zoe} />
+            <p>Zoe</p>
           </div>
 
           <div className="client-pet">
-            <img className="pet-img" src={earl} alt="earl" />
-            <p>Earl</p>
+            <img className="pet-img" src={buzz} />
+            <p>Buzz</p>
           </div>
 
           <div className="client-pet">
-            <img className="pet-img" src={earl} alt="earl" />
-            <p>Earl</p>
+            <img className="pet-img" src={cristoff} />
+            <p>Cristoff</p>
           </div>
+
           <div className="client-pet">
-            <img className="pet-img" src={earl} alt="earl" />
+            <img className="pet-img" src={earl} />
             <p>Earl</p>
           </div>
         </div>
