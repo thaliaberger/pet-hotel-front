@@ -36,9 +36,18 @@ function Homepage() {
         <h2>Estrutura</h2>
 
         <div className="structure-imgs">
-          <img src="https://petshopcontrol.blob.core.windows.net/blog/blog/wp-content/uploads/hotel-para-cachorros-e-gatos-1-768x432.jpg" />
-          <img src="https://petshopcontrol.blob.core.windows.net/blog/blog/wp-content/uploads/hotel-para-chorros-gatos.png" />
-          <img src="https://petshopcontrol.blob.core.windows.net/blog/blog/wp-content/uploads/hotel-cachorros-e-gatos.jpg" />
+          <img
+            src="https://petshopcontrol.blob.core.windows.net/blog/blog/wp-content/uploads/hotel-para-cachorros-e-gatos-1-768x432.jpg"
+            alt=""
+          />
+          <img
+            src="https://petshopcontrol.blob.core.windows.net/blog/blog/wp-content/uploads/hotel-para-chorros-gatos.png"
+            alt=""
+          />
+          <img
+            src="https://petshopcontrol.blob.core.windows.net/blog/blog/wp-content/uploads/hotel-cachorros-e-gatos.jpg"
+            alt=""
+          />
         </div>
       </div>
       <div className="clients">
@@ -46,40 +55,40 @@ function Homepage() {
 
         <div className="client-pets">
           <div className="client-pet">
-            <img className="pet-img" src={amora} />
+            <img className="pet-img" src={amora} alt="amora" />
             <p>Amora</p>
           </div>
           <div className="client-pet">
-            <img className="pet-img" src={lummy} />
+            <img className="pet-img" src={lummy} alt="lummy" />
             <p>Lummy</p>
           </div>
           <div className="client-pet">
-            <img className="pet-img" src={alceu} />
+            <img className="pet-img" src={alceu} alt="alceu" />
             <p>Alceu</p>
           </div>
           <div className="client-pet">
-            <img className="pet-img" src={buzz} />
+            <img className="pet-img" src={buzz} alt="buzz" />
             <p>Buzz</p>
           </div>
         </div>
         <div className="client-pets">
           <div className="client-pet">
-            <img className="pet-img" src={zoe} />
+            <img className="pet-img" src={zoe} alt="zoe" />
             <p>Zoe</p>
           </div>
 
           <div className="client-pet">
-            <img className="pet-img" src={buzz} />
+            <img className="pet-img" src={buzz} alt="buzz" />
             <p>Buzz</p>
           </div>
 
           <div className="client-pet">
-            <img className="pet-img" src={cristoff} />
-            <p>Cristoff</p>
+            <img className="pet-img" src={christoff} alt="christoff" />
+            <p>Christoff</p>
           </div>
 
           <div className="client-pet">
-            <img className="pet-img" src={earl} />
+            <img className="pet-img" src={earl} alt="earl" />
             <p>Earl</p>
           </div>
         </div>
