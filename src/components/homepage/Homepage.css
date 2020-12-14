@@ -134,6 +134,48 @@ select:focus {
   background: none;
 }
 
+/* MISSION, VISION AND VALUES */
+
+.mvv {
+  display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.text h3 {
+  color: #f4f4f4;
+  font-size: 25px;
+  text-shadow: 1px 1px 0px #d5e6eb;
+  letter-spacing: 2px;
+  margin-bottom: 0px;
+}
+
+.text p {
+  color: #4995a6;
+  font-size: 15px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.text {
+  background-color: rgb(239, 250, 255, 0.2);
+  width: 220px;
+  text-align: center;
+  padding: 0px 30px 30px 30px;
+  height: 230px;
+}
+
+.dinossauro img {
+  height: 260px;
+  width: 280px;
+}
+
+.dinossauro {
+  display: flex;
+  flex-direction: column;
+}
+
 /* ESTRUTURA */
 
 .structure {
@@ -248,3 +290,5 @@ select:focus {
 .footer-link:hover {
   color: #0f4555;
 }
+
+

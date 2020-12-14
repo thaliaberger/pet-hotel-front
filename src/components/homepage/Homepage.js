@@ -14,6 +14,9 @@ import christoff from "../../images/cristoff.jpeg";
 import buzz from "../../images/buzz.jpg";
 import logo from "../../images/logo.png";
 import simba from "../../images/simba.jpg";
+import missaoImg from "../../images/missaoImg.jpg";
+import visaoImg from "../../images/visaoImg.jpg";
+import valoresImg from "../../images/valoresImg.jpg";
 
 function Homepage() {
   return (
@@ -32,6 +35,44 @@ function Homepage() {
           Profissionais capacitados com anos de experiência em comportamento
           animal.
         </p>
+      </div>
+      <div className="mvv">
+        <div className="dinossauro">
+          <img src={missaoImg} alt="Missão" />
+          <div className="text">
+            <h3>Missão</h3>
+            <p>
+              Nosso propósito é ser um local seguro, feliz e saudável, que
+              proporciona uma experiência com muita diversão, amor, carinho,
+              dedicação e atenção para os pets. Amamos cada animalzinho como se
+              fosse nosso!
+            </p>
+          </div>
+        </div>
+        <div className="dinossauro">
+          <div className="text">
+            <h3>Visão</h3>
+            <p>
+              Queremos ser referência e primeira lembrança e escolha de lugar
+              para deixar o seu pet, através de um trabalho confiável e de
+              excelência. Ser segunda casa e segunda família para o seu bichinho
+              na sua ausência, com muita dedicação e amor.
+            </p>
+          </div>
+          <img src={visaoImg} alt="Visão" />
+        </div>
+        <div className="dinossauro">
+          <img src={valoresImg} alt="Valores" />
+          <div className="text">
+            <h3>Valores</h3>
+            <p>
+              Comprometimento, respeito, credibilidade, ética, transparência,
+              confiança, segurança, conforto, dedicação, cuidado, amor e
+              carinho. Isso nos garante satisfação plena de todos os nossos
+              clientes e hóspedes!
+            </p>
+          </div>
+        </div>
       </div>
       <div className="structure">
         <h2>Estrutura</h2>
