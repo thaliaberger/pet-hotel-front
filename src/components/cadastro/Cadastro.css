@@ -15,7 +15,6 @@
 }
 
 .cadastro-pet {
-  height: 500px;
   margin-top: 20px;
   padding: 20px 50px 50px 50px;
 }
@@ -78,4 +77,10 @@ label {
 
 .radio-input img {
   width: 100px;
+}
+
+.google-register {
+  text-decoration: none;
+  color: #4995a6;
+  font-weight: bold;
 }
