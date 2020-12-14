@@ -50,8 +50,8 @@ function Register() {
         error={errors.password}
       />
       <div className="botoes-cadastro">
-        <Btn type="submit" color="laranja" label="Cadastrar"/>
         <Btn targetUrl="/" color="azul" label="Voltar" />
+        <Btn type="submit" color="laranja" label="Cadastrar" />
       </div>
     </form>
   );
