@@ -13,6 +13,10 @@ function Navbar() {
     }
   }
 
+  var scrollTop = function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   useEffect(() => {
     window.onscroll = () => handleScroll();
   }, []);
@@ -21,10 +25,10 @@ function Navbar() {
     <div className={state}>
       <div className="nav">
         <div className="nav-content">
-          <Link className="nav-content" to="/">
+          <Link className="nav-content" onClick={scrollTop}>
             <p>Entrar</p>
           </Link>
-          <Link className="nav-content" to="/">
+          <Link className="nav-content" to="/register">
             <p>Cadastre-se</p>
           </Link>
         </div>

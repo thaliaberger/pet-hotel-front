@@ -15,6 +15,7 @@ function Dashboard() {
           <AboutHuman />
           <AboutPet />
           <Btn type="submit" color="laranja" label="Editar" />
+          <Btn targetUrl="/novo-pet" color="azul" label="Adicionar Pet" />
         </div>
         <div className="agenda">
           <Agendamentos />
