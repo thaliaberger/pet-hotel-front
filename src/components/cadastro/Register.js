@@ -11,8 +11,7 @@ function Register() {
 
 				<FormRegister />
 
-				<Link to="http://ec2-52-14-163-166.us-east-2.compute.amazonaws.com/api/auth/google">
-					{" "}
+				<Link to="/api/auth/google">
 					Cadastrar com Google
 				</Link>
 			</div>
