@@ -13,6 +13,7 @@ import amora from "../../images/amora.jpeg";
 import christoff from "../../images/cristoff.jpeg";
 import buzz from "../../images/buzz.jpg";
 import logo from "../../images/logo.png";
+import simba from "../../images/simba.jpg";
 
 function Homepage() {
   return (
@@ -78,8 +79,8 @@ function Homepage() {
           </div>
 
           <div className="client-pet">
-            <img className="pet-img" src={buzz} alt="buzz" />
-            <p>Buzz</p>
+            <img className="pet-img" src={simba} alt="buzz" />
+            <p>Simba</p>
           </div>
 
           <div className="client-pet">

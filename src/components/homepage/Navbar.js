@@ -24,7 +24,7 @@ function Navbar() {
           <Link className="nav-content" to="/">
             <p>Entrar</p>
           </Link>
-          <Link className="nav-content" to="/">
+          <Link className="nav-content" to="/register">
             <p>Cadastre-se</p>
           </Link>
         </div>
