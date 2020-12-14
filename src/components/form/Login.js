@@ -33,27 +33,27 @@ function Login() {
 		}
 	}
 
-	return (
-		<div className="signin">
-			<form onSubmit={handleSubmit}>
-				<SimpleInput
-					name="email"
-					label="e-mail"
-					type="text"
-					value={state.email}
-					onChange={handleChange}
-				/>
-				<SimpleInput
-					name="password"
-					label="Password"
-					type="password"
-					value={state.password}
-					onChange={handleChange}
-				/>
-				<Btn color="laranja" label="Entrar" type="submit" />
-			</form>
-		</div>
-	);
+  return (
+    <div className="signin">
+      <form onSubmit={handleSubmit}>
+        <SimpleInput
+          name="email"
+          label="e-mail"
+          type="text"
+          value={state.email}
+          onChange={handleChange}
+        />
+        <SimpleInput
+          name="password"
+          label="Password"
+          type="password"
+          value={state.password}
+          onChange={handleChange}
+        />
+        <Btn type="submit" color="laranja" label="Entrar"/>
+      </form>
+    </div>
+  );
 }
 
 export default Login;

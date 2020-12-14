@@ -31,30 +31,30 @@ function Register() {
 		}
 	}
 
-	return (
-		<form onSubmit={handleSubmit}>
-			<SimpleInput
-				name="email"
-				label="e-mail"
-				type="text"
-				value={state.email}
-				onChange={handleChange}
-				error={errors.email}
-			/>
-			<SimpleInput
-				name="password"
-				label="Password"
-				type="password"
-				value={state.password}
-				onChange={handleChange}
-				error={errors.password}
-			/>
-			<div className="botoes-cadastro">
-				<Btn type="submit" color="laranja" label="Cadastrar" />
-				<Btn targetUrl="/" color="azul" label="Voltar" />
-			</div>
-		</form>
-	);
+  return (
+    <form onSubmit={handleSubmit}>
+      <SimpleInput
+        name="email"
+        label="e-mail"
+        type="text"
+        value={state.email}
+        onChange={handleChange}
+        error={errors.email}
+      />
+      <SimpleInput
+        name="password"
+        label="Password"
+        type="password"
+        value={state.password}
+        onChange={handleChange}
+        error={errors.password}
+      />
+      <div className="botoes-cadastro">
+        <Btn type="submit" color="laranja" label="Cadastrar"/>
+        <Btn targetUrl="/" color="azul" label="Voltar" />
+      </div>
+    </form>
+  );
 }
 
 export default Register;
