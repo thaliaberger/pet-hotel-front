@@ -50,7 +50,7 @@ function Login() {
           value={state.password}
           onChange={handleChange}
         />
-        <Btn type="submit" color="laranja" label="Entrar" type="submit" />
+        <Btn type="submit" color="laranja" label="Entrar"/>
       </form>
     </div>
   );
