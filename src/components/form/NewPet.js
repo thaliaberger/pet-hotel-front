@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import axios from "axios";
 import { useHistory } from "react-router-dom";
 import InputTags from "react-input-tags-hooks";
+import api from "../../api/HotelApi";
+
+import "./TagInput.css";
 
 import SimpleInput from "./SimpleInput";
 import SelectInput from "./SelectInput";
@@ -18,26 +20,29 @@ function NewPet() {
     animal: "",
     size: "",
     breed: "",
-    allergy: [],
-    disease: [],
+    helthy: {
+      allergy: [],
+      disease: [],
+    },
     picture: "",
     recomendations: "",
   });
 
   const getDiseaseTags = (diseaseTags) => {
     setDiseaseTags(diseaseTags);
-    setState({ ...state, disease: diseaseTags });
+    setState({ ...state, helthy: { disease: diseaseTags } });
   };
 
   const getAllergyTags = (allergyTags) => {
     setAllergyTags(allergyTags);
-    setState({ ...state, allergy: allergyTags });
+    setState({ ...state, helthy: { allergy: allergyTags } });
   };
 
   const [errors, setErrors] = useState({
     name: null,
     animal: null,
   });
+
   const history = useHistory();
 
   const size = ["Big", "Medium", "Small"];
@@ -53,14 +58,32 @@ function NewPet() {
     console.log(state);
   }
 
+  async function handleFileUpload(file) {
+    try {
+      const uploadData = new FormData();
+
+      uploadData.append("picture", file);
+
+      const response = await api.post("/file-upload", uploadData);
+
+      return response.data.fileUrl;
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
   async function handleSubmit(event) {
     event.preventDefault();
     try {
-      const response = await axios.post(
-        "http://ec2-52-14-163-166.us-east-2.compute.amazonaws.com/api/pet",
-        state
-      );
-      console.log(response.data);
+      const uploadedImageUrl = await handleFileUpload(state.picture);
+
+      const response = await api.post("/pet", {
+        ...state,
+        state: uploadedImageUrl,
+      });
+
+      console.log(response);
+
       history.push("/dashboard");
     } catch (error) {
       console.log(error.response);
