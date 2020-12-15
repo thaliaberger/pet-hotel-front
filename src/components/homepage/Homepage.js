@@ -35,6 +35,7 @@ function Homepage() {
           animal.
         </p>
       </div>
+
       <div className="mvv">
         <div className="dinossauro">
           <img src={missaoImg} alt="Missão" />
@@ -57,7 +58,8 @@ function Homepage() {
           <p>Comprometimento, respeito, credibilidade, ética, transparência, confiança, segurança, conforto, dedicação, cuidado, amor e carinho. Isso nos garante satisfação plena de todos os nossos clientes e hóspedes!</p> 
           </div> 
         </div>
-      </div>           
+      </div>  
+
       <div className="structure">
         <h2>Estrutura</h2>
 
@@ -76,6 +78,7 @@ function Homepage() {
           />
         </div>
       </div>
+
       <div className="clients">
         <h2>Clientes VIP</h2>
 
@@ -119,6 +122,7 @@ function Homepage() {
           </div>
         </div>
       </div>
+
       <div className="footer">
         <footer>
           <p>
@@ -137,6 +141,7 @@ function Homepage() {
           </div>
         </footer>
       </div>
+      
     </div>
   );
 }

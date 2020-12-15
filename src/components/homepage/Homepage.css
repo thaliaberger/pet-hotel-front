@@ -140,7 +140,8 @@ select:focus {
   display: flex;
 	flex-direction: row;
 	justify-content: center;
-	align-items: center;
+  align-items: center;
+  margin-bottom: 80px;
 }
 
 .text h3 {
