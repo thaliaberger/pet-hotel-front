@@ -3,6 +3,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import axios from "axios";
 import Accommodation from "./Accommodation";
+import "./Booking.css";
 
 const storedUser = localStorage.getItem("loggedInUser");
 const loggedInUser = JSON.parse(storedUser || '""');
@@ -34,7 +35,7 @@ function Booking() {
 	}
 
 	return (
-		<div>
+		<div className="container">
 			<div>
 				<DatePicker
 					selected={booking.startDate}
