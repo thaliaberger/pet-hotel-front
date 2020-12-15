@@ -1,24 +1,39 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
+import InputTags from "react-input-tags-hooks";
 
 import SimpleInput from "./SimpleInput";
 import SelectInput from "./SelectInput";
 import FileInput from "./FileInput";
 import RadioInput from "./RadioInput";
-import Btn from "./Btn";
 
 function NewPet() {
+  const [allergyTags, setAllergyTags] = useState([]);
+
+  const [diseaseTags, setDiseaseTags] = useState([]);
+
   const [state, setState] = useState({
     name: "",
     animal: "",
     size: "",
     breed: "",
-    allergy: "",
-    disease: "",
+    allergy: [],
+    disease: [],
     picture: "",
     recomendations: "",
   });
+
+  const getDiseaseTags = (diseaseTags) => {
+    setDiseaseTags(diseaseTags);
+    setState({ ...state, disease: diseaseTags });
+  };
+
+  const getAllergyTags = (allergyTags) => {
+    setAllergyTags(allergyTags);
+    setState({ ...state, allergy: allergyTags });
+  };
+
   const [errors, setErrors] = useState({
     name: null,
     animal: null,
@@ -29,8 +44,13 @@ function NewPet() {
 
   const breed = ["Macho", "Fêmea"];
 
+  function goBack() {
+    history.push("/dashboard");
+  }
+
   function handleChange(event) {
     setState({ ...state, [event.target.name]: event.target.value });
+    console.log(state);
   }
 
   async function handleSubmit(event) {
@@ -58,7 +78,7 @@ function NewPet() {
         onChange={handleChange}
         error={errors.name}
       />
-      <RadioInput />
+      <RadioInput onChange={handleChange} />
       <SelectInput
         label="Selecionar Porte"
         id="size"
@@ -82,16 +102,30 @@ function NewPet() {
         value={state.recomendations}
         onChange={handleChange}
       />
+      <InputTags
+        onTag={getAllergyTags}
+        tagColor="#fc9c60"
+        placeHolder="Alergias"
+      />
+      <InputTags
+        onTag={getDiseaseTags}
+        tagColor="#fc9c60"
+        placeHolder="Doenças"
+      />
       <FileInput
-        id="petImage"
-        name="petImage"
+        id="picture"
+        name="picture"
         label="Enviar Imagem"
         value={state.picture}
         onChange={handleChange}
       />
       <div className="botoes-cadastro">
-        <Btn targetUrl="/dashboard" color="azul" label="Voltar" />
-        <Btn type="submit" color="laranja" label="Ok" />
+        <button className="botao-azul" type="button" onClick={goBack}>
+          Voltar
+        </button>
+        <button className="botao-laranja" type="button" onClick={handleSubmit}>
+          Ok
+        </button>
       </div>
     </form>
   );
