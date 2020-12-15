@@ -6,32 +6,32 @@ import { AuthContext } from "../../contexts/AuthContext";
 import { useHistory } from "react-router-dom";
 
 function Login() {
-  const [state, setState] = useState({ email: "", password: "" });
-  const authContext = useContext(AuthContext);
-  const history = useHistory();
+	const [state, setState] = useState({ email: "", password: "" });
+	const authContext = useContext(AuthContext);
+	const history = useHistory();
 
-  function handleChange(event) {
-    setState({ ...state, [event.target.name]: event.target.value });
-  }
+	function handleChange(event) {
+		setState({ ...state, [event.target.name]: event.target.value });
+	}
 
-  async function handleSubmit(event) {
-    event.preventDefault();
-    try {
-      const response = await axios.post(
-        "http://ec2-52-14-163-166.us-east-2.compute.amazonaws.com/api/user/login",
-        state
-      );
-      authContext.setLoggedInUser({ ...response.data });
-      localStorage.setItem(
-        "loggedInUser",
-        JSON.stringify({ ...response.data })
-      );
+	async function handleSubmit(event) {
+		event.preventDefault();
+		try {
+			const response = await axios.post(
+				"http://ec2-52-14-163-166.us-east-2.compute.amazonaws.com/api/user/login",
+				state
+			);
+			authContext.setLoggedInUser({ ...response.data });
+			localStorage.setItem(
+				"loggedInUser",
+				JSON.stringify({ ...response.data })
+			);
 
-      history.push("/dashboard");
-    } catch (error) {
-      console.log(error);
-    }
-  }
+			history.push("/dashboard");
+		} catch (error) {
+			console.log(error);
+		}
+	}
 
   return (
     <div className="signin">
