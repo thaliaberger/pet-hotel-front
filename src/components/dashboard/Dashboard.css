@@ -40,10 +40,21 @@
 .sobre-humano {
   width: 400px;
   margin-bottom: 100px;
+  margin-left: 30px;
 }
 
 .sobre-pet {
   width: 400px;
+
+  margin-left: 30px;
+}
+
+.each-pet {
+  margin: 40px 0;
+}
+
+.each-pet img {
+  margin-bottom: 10px;
 }
 
 /* AGENDA */
