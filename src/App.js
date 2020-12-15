@@ -9,6 +9,11 @@ import Dashboard from "./components/dashboard/Dashboard";
 import { AuthContextComponent } from "./contexts/AuthContext";
 import PrivateRoute from "./routes/PrivateRoute";
 
+import Cadastro from "./components/cadastro/Cadastro"
+
+import Booking from "./components/booking/Booking";
+
+
 function App() {
 	return (
 		<div className="">
@@ -17,8 +22,13 @@ function App() {
 					<Switch>
 						<Route exact path="/" component={Homepage} />
 						<Route exact path="/register" component={Register} />
-						<PrivateRoute exact path="/cadastro/pet" component={CadastroPet} />
+
+						<Route exact path="/cadastro" component={Cadastro} />
+
+						<PrivateRoute exact path="/novo-pet" component={CadastroPet} />
+
 						<PrivateRoute exact path="/dashboard" component={Dashboard} />
+						<PrivateRoute exact path="/booking" component={Booking} />
 					</Switch>
 				</AuthContextComponent>
 			</BrowserRouter>
