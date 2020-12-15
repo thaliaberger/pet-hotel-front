@@ -10,7 +10,7 @@ import SelectInput from "./SelectInput";
 import FileInput from "./FileInput";
 import RadioInput from "./RadioInput";
 
-function NewPet(props) {
+function NewPet() {
   const [allergyTags, setAllergyTags] = useState([]);
 
   const [diseaseTags, setDiseaseTags] = useState([]);
@@ -30,12 +30,18 @@ function NewPet(props) {
 
   const getDiseaseTags = (diseaseTags) => {
     setDiseaseTags(diseaseTags);
-    setState({ ...state, helthy: { disease: diseaseTags } });
+    setState({
+      ...state,
+      helthy: { disease: diseaseTags, allergy: allergyTags },
+    });
   };
 
   const getAllergyTags = (allergyTags) => {
     setAllergyTags(allergyTags);
-    setState({ ...state, helthy: { allergy: allergyTags } });
+    setState({
+      ...state,
+      helthy: { disease: diseaseTags, allergy: allergyTags },
+    });
   };
 
   const [errors, setErrors] = useState({
@@ -54,7 +60,18 @@ function NewPet(props) {
   }
 
   function handleChange(event) {
-    setState({ ...state, [event.target.name]: event.target.value });
+    if (event.currentTarget.files) {
+      return setState({
+        ...state,
+        [event.currentTarget.name]: event.currentTarget.files[0],
+      });
+      console.log(state);
+    }
+
+    setState({
+      ...state,
+      [event.currentTarget.name]: event.currentTarget.value,
+    });
     console.log(state);
   }
 
@@ -62,7 +79,7 @@ function NewPet(props) {
     try {
       const uploadData = new FormData();
 
-      uploadData.append("picture", file);
+      uploadData.append("img-upload", file);
 
       const response = await api.post("/file-upload", uploadData);
 
@@ -79,15 +96,14 @@ function NewPet(props) {
 
       const response = await api.post("/pet", {
         ...state,
-        state: uploadedImageUrl,
+        picture: uploadedImageUrl,
       });
 
       console.log(response);
 
-      props.history.push("/dashboard");
+      history.push("/dashboard");
     } catch (error) {
       console.log(error.response);
-      setErrors({ ...error.response.data.errors });
     }
   }
 
