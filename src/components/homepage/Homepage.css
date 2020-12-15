@@ -119,6 +119,12 @@ select:focus {
 
 .mvv {
   display: flex;
+
+	flex-direction: row;
+	justify-content: center;
+  align-items: center;
+  margin-bottom: 80px;
+
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -131,6 +137,7 @@ select:focus {
   margin-bottom: 90px;
   font-size: 40px;
   text-shadow: 1px 1px 0px #d5e6eb;
+
 }
 
 .text h3 {
