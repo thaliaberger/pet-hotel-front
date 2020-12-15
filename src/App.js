@@ -8,22 +8,24 @@ import CadastroPet from "./components/cadastro/CadastroPet";
 import Dashboard from "./components/dashboard/Dashboard";
 import { AuthContextComponent } from "./contexts/AuthContext";
 import PrivateRoute from "./routes/PrivateRoute";
+import Booking from "./components/booking/Booking";
 
 function App() {
-  return (
-    <div className="">
-      <BrowserRouter>
-        <AuthContextComponent>
-          <Switch>
-            <Route exact path="/" component={Homepage} />
-            <Route exact path="/register" component={Register} />
-            <PrivateRoute exact path="/novo-pet" component={CadastroPet} />
-            <PrivateRoute exact path="/dashboard" component={Dashboard} />
-          </Switch>
-        </AuthContextComponent>
-      </BrowserRouter>
-    </div>
-  );
+	return (
+		<div className="">
+			<BrowserRouter>
+				<AuthContextComponent>
+					<Switch>
+						<Route exact path="/" component={Homepage} />
+						<Route exact path="/register" component={Register} />
+						<PrivateRoute exact path="/novo-pet" component={CadastroPet} />
+						<PrivateRoute exact path="/dashboard" component={Dashboard} />
+						<PrivateRoute exact path="/booking" component={Booking} />
+					</Switch>
+				</AuthContextComponent>
+			</BrowserRouter>
+		</div>
+	);
 }
 
 export default App;
