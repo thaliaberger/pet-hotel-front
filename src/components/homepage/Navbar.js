@@ -3,34 +3,38 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
-  const [state, setState] = useState("hidden");
+	const [state, setState] = useState("hidden");
 
-  function handleScroll() {
-    if (document.documentElement.scrollTop > 450) {
-      setState("show");
-    } else {
-      setState("hidden");
-    }
-  }
+	function handleScroll() {
+		if (document.documentElement.scrollTop > 450) {
+			setState("show");
+		} else {
+			setState("hidden");
+		}
+	}
 
-  useEffect(() => {
-    window.onscroll = () => handleScroll();
-  }, []);
+	var scrollTop = function () {
+		window.scrollTo({ top: 0, behavior: "smooth" });
+	};
 
-  return (
-    <div className={state}>
-      <div className="nav">
-        <div className="nav-content">
-          <Link className="nav-content" to="/">
-            <p>Entrar</p>
-          </Link>
-          <Link className="nav-content" to="/">
-            <p>Cadastre-se</p>
-          </Link>
-        </div>
-      </div>
-    </div>
-  );
+	useEffect(() => {
+		window.onscroll = () => handleScroll();
+	}, []);
+
+	return (
+		<div className={state}>
+			<div className="nav">
+				<div className="nav-content">
+					<Link className="nav-content" to="/" onClick={scrollTop}>
+						<p>Entrar</p>
+					</Link>
+					<Link className="nav-content" to="/register">
+						<p>Cadastre-se</p>
+					</Link>
+				</div>
+			</div>
+		</div>
+	);
 }
 
 export default Navbar;

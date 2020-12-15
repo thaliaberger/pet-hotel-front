@@ -15,8 +15,8 @@
 }
 
 .cadastro-pet {
-  height: 500px;
-  margin-top: 20px;
+  height: 600px;
+  margin: 20px 0;
   padding: 20px 50px 50px 50px;
 }
 
@@ -32,6 +32,7 @@
   display: flex;
   align-items: baseline;
   justify-content: center;
+  margin-right: 10px;
 }
 
 .botoes-cadastro button {
@@ -56,13 +57,32 @@ input[type="file"] {
 }
 label {
   padding: 10px 0 10px 15px;
-  width: 105px;
-  background-color: rgb(255, 255, 255);
+  width: 101px;
+  background-color: #8bc4d6;
   font-size: 13px;
-  color: grey;
+  color: #f4f4f4;
   display: block;
   margin: 5px;
   cursor: pointer;
   border-radius: 15px;
   font-family: "Arial", sans-serif;
+}
+
+.radio-input-container {
+  width: 530px;
+}
+
+.radio-input {
+  display: flex;
+  flex-direction: row;
+}
+
+.radio-input img {
+  width: 100px;
+}
+
+.google-register {
+  text-decoration: none;
+  color: #4995a6;
+  font-weight: bold;
 }
