@@ -26,6 +26,7 @@ function Homepage() {
         <img className="logo" src={logo} alt="logo" />
         <SignIn />
       </div>
+
       <div className="mvv-container">
         <h2>O Hotel</h2>
         <div className="mvv">
@@ -64,9 +65,14 @@ function Homepage() {
                 clientes e hóspedes!
               </p>
             </div>
+
           </div>
         </div>
+ 
+
+
       </div>
+
       <div className="structure">
         <h2>Estrutura</h2>
         <div className="structure-info">
@@ -93,6 +99,7 @@ function Homepage() {
           </div>
         </div>
       </div>
+
       <div className="clients">
         <h2>Clientes VIP</h2>
 
@@ -136,6 +143,7 @@ function Homepage() {
           </div>
         </div>
       </div>
+
       <div className="footer">
         <footer>
           <p>
@@ -154,6 +162,7 @@ function Homepage() {
           </div>
         </footer>
       </div>
+      
     </div>
   );
 }
