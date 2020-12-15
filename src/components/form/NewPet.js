@@ -10,7 +10,7 @@ import SelectInput from "./SelectInput";
 import FileInput from "./FileInput";
 import RadioInput from "./RadioInput";
 
-function NewPet() {
+function NewPet(props) {
   const [allergyTags, setAllergyTags] = useState([]);
 
   const [diseaseTags, setDiseaseTags] = useState([]);
@@ -84,7 +84,7 @@ function NewPet() {
 
       console.log(response);
 
-      history.push("/dashboard");
+      props.history.push("/dashboard");
     } catch (error) {
       console.log(error.response);
       setErrors({ ...error.response.data.errors });
