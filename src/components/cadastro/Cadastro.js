@@ -1,14 +1,14 @@
 import React from "react";
 import "./Cadastro.css";
 
-import FormCadastro from "../form/FormCadastro";
+import NovoCadastro from "../form/NovoCadastro";
 
 function Cadastro() {
 	return (
 		<div className="container">
 			<div className="cadastro">
 				<h2>Sobre você</h2>
-				<FormCadastro />
+				<NovoCadastro />
 			</div>
 		</div>
 	);

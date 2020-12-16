@@ -9,7 +9,7 @@ import Dashboard from "./components/dashboard/Dashboard";
 import { AuthContextComponent } from "./contexts/AuthContext";
 import PrivateRoute from "./routes/PrivateRoute";
 
-import Cadastro from "./components/cadastro/Cadastro"
+import Cadastro from "./components/cadastro/Cadastro";
 import EditCadastro from "./components/cadastro/EditCadastro";
 
 import Booking from "./components/booking/Booking";
