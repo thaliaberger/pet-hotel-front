@@ -5,11 +5,13 @@ import Accommodation from "./Accommodation";
 import PetPicker from "./PetPicker";
 import "./Booking.css";
 import api from "../../api/HotelApi";
+import { useHistory } from "react-router-dom";
 
 const storedUser = localStorage.getItem("loggedInUser");
 
 function Booking() {
 	const [pets, setPets] = useState([]);
+	const history = useHistory();
 	const [screen, setScreen] = useState({ rooms: [], totalAmonunt: 0 });
 	const [booking, setBooking] = useState({
 		startDate: new Date(),
@@ -71,12 +73,12 @@ function Booking() {
 				errorMsg: "Favor verificar as informações antes de continuar",
 			});
 		} else {
-			setBooking({
+			let data = {
 				...booking,
 				value: booking.days * booking.valUnit * booking.pets.length,
-			});
-
-			const result = await api.post(`booking`, booking);
+			};
+			const result = await api.post(`booking`, data);
+			history.push("/dashboard");
 		}
 	}
 
