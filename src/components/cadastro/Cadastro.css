@@ -10,14 +10,15 @@
   background-color: rgb(194, 221, 230, 0.4);
   padding: 50px;
   border-radius: 25px;
-  height: 450px;
-  margin-top: 40px;
 }
 
-.cadastro-pet {
-  height: 600px;
-  margin: 20px 0;
-  padding: 20px 50px 50px 50px;
+.cadastro2 {
+  flex-direction: column;
+  width: 540px;
+  background-color: rgb(194, 221, 230, 0.4);
+  padding: 50px;
+  border-radius: 25px;
+  margin-top: 20px;
 }
 
 .cadastro input {
@@ -35,12 +36,45 @@
   margin-right: 10px;
 }
 
+.delete-btn-div {
+  display: flex;
+  justify-content: center;
+}
+
+.botao-vermelho {
+  background-color: #db5050;
+  color: #f4f4f4;
+  border-radius: 25px;
+  padding: 5px 15px;
+  font-size: 15px;
+  border: 3px solid #db5050;
+  margin: 20px 0;
+  transition: 0.2s ease-in-out;
+}
+
+.botao-vermelho:hover {
+  color: #db5050;
+  background: none;
+}
+
 .botoes-cadastro button {
   margin: 40px 70px;
 }
 
 .cadastro h2 {
   color: #4995a6;
+}
+
+.cadastro2 h2 {
+  color: #4995a6;
+}
+
+.cadastro2 input {
+  padding: 10px 0 10px 15px;
+  border: none;
+  margin: 5px;
+  width: 515px;
+  border-radius: 15px;
 }
 
 .select {
