@@ -5,7 +5,7 @@ import api from "../../api/HotelApi";
 import FormCadastro from "../form/FormCadastro";
 
 function EditCadastro(props) {
-
+  
     const [ adressState, setAdress] = useState({
         street: "", 
         number: "", 
@@ -85,7 +85,6 @@ function EditCadastro(props) {
         </div>
        
     );
-
 }
 
 export default EditCadastro;

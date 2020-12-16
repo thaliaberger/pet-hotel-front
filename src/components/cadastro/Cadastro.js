@@ -12,6 +12,7 @@ function Cadastro() {
 			</div>
 		</div>
 	);
+
 }
 
 export default Cadastro;
