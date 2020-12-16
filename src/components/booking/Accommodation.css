@@ -5,3 +5,12 @@
 	width: 100%;
 	cursor: pointer;
 }
+
+.container-accommodation-selected {
+	display: flex;
+	justify-content: center;
+	margin: 0 0;
+	width: 100%;
+	cursor: pointer;
+	background-color: rebeccapurple;
+}
