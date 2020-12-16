@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./Homepage.css";
 
 import Navbar from "./Navbar";
@@ -65,12 +64,8 @@ function Homepage() {
                 clientes e hóspedes!
               </p>
             </div>
-
           </div>
         </div>
- 
-
-
       </div>
 
       <div className="structure">
@@ -150,19 +145,30 @@ function Homepage() {
             Projeto desenvolvido para o bootcamp de Web Development da IRONHACK.
           </p>
           <div className="footer-links">
-            <a className="footer-link" target="_blank" href="https://github.com/rodrigomatosrj">
+            <a
+              className="footer-link"
+              target="_blank"
+              href="https://github.com/rodrigomatosrj"
+            >
               Rodrigo Matos | GitHub
             </a>
-            <a className="footer-link" target="_blank" href="https://github.com/lauraferraz5">
+            <a
+              className="footer-link"
+              target="_blank"
+              href="https://github.com/lauraferraz5"
+            >
               Laura Ferraz | GitHub
             </a>
-            <a className="footer-link" target="_blank" href="https://github.com/thaliaberger">
+            <a
+              className="footer-link"
+              target="_blank"
+              href="https://github.com/thaliaberger"
+            >
               Thalía Berger | GitHub
             </a>
           </div>
         </footer>
       </div>
-      
     </div>
   );
 }
