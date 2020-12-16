@@ -150,15 +150,15 @@ function Homepage() {
             Projeto desenvolvido para o bootcamp de Web Development da IRONHACK.
           </p>
           <div className="footer-links">
-            <Link className="footer-link" to="/">
+            <a className="footer-link" target="_blank" href="https://github.com/rodrigomatosrj">
               Rodrigo Matos | GitHub
-            </Link>
-            <Link className="footer-link" to="/">
+            </a>
+            <a className="footer-link" target="_blank" href="https://github.com/lauraferraz5">
               Laura Ferraz | GitHub
-            </Link>
-            <Link className="footer-link" to="/">
+            </a>
+            <a className="footer-link" target="_blank" href="https://github.com/thaliaberger">
               Thalía Berger | GitHub
-            </Link>
+            </a>
           </div>
         </footer>
       </div>
