@@ -1,0 +1,12 @@
+.container-petpicker {
+	display: flex;
+	justify-content: center;
+	margin: 0 0;
+	width: 100%;
+	cursor: pointer;
+}
+
+.container-petpicker-selected {
+
+	background-color: rebeccapurple;
+}
