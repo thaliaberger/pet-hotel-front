@@ -64,12 +64,8 @@ function Homepage() {
                 clientes e hóspedes!
               </p>
             </div>
-
           </div>
         </div>
- 
-
-
       </div>
 
       <div className="structure">
@@ -149,6 +145,7 @@ function Homepage() {
             Projeto desenvolvido para o bootcamp de Web Development da IRONHACK.
           </p>
           <div className="footer-links">
+
             <a className="footer-link" target="_blank" rel="noreferrer" href="https://github.com/rodrigomatosrj">
               Rodrigo Matos | GitHub
             </a>
@@ -161,7 +158,6 @@ function Homepage() {
           </div>
         </footer>
       </div>
-      
     </div>
   );
 }
