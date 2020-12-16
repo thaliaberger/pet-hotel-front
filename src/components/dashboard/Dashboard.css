@@ -6,7 +6,7 @@
 
 .dashboard {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   background-color: rgb(194, 221, 230, 0.4);
   line-height: 0.5;
   width: 800px;
@@ -33,6 +33,14 @@
 .dashboard p {
   color: #4995a6;
   font-size: 14px;
+  line-height: 10px;
+}
+
+/* FIRST ROW */
+
+.first-row {
+  display: flex;
+  flex-direction: row;
 }
 
 /* ABOUT */
@@ -43,18 +51,39 @@
   margin-left: 30px;
 }
 
-.sobre-pet {
-  width: 400px;
-
-  margin-left: 30px;
+.pet-div h2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
 }
 
 .each-pet {
+  width: 250px;
   margin: 40px 0;
 }
 
 .each-pet img {
+  margin-left: 50px;
   margin-bottom: 10px;
+}
+
+.add-pet-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.edit-pet-btn {
+  margin-left: 88px;
+}
+
+.all-pets {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.pet-text {
+  height: 180px;
 }
 
 /* AGENDA */

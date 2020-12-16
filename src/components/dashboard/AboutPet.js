@@ -1,7 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react/cjs/react.development";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 import api from "../../api/HotelApi";
+import Btn from "../form/Btn";
 
 function AboutPet() {
   const [pets, setPets] = useState({});
@@ -14,7 +15,6 @@ function AboutPet() {
         const response = await api.get("/pet");
         console.log(response);
         setPets({ ...response.data });
-        console.log(pets);
       } catch (err) {
         console.error(err.response);
       }
@@ -24,31 +24,49 @@ function AboutPet() {
 
   return (
     <div className="sobre-pet">
-      <h2>Meus Pets</h2>
-      <div>
+      <div className="all-pets">
         {pets.pets
           ? pets.pets.map((pet) => (
               <div className="each-pet">
-                <img src={pet.picture} />
-                <p>
-                  <strong>Name: </strong>
-                  {pet.name}
-                </p>
-                <p>
-                  <strong>Animal: </strong>
-                  {pet.animal}
-                </p>
-                <p>
-                  <strong>Tamanho: </strong>
-                  {pet.size}
-                </p>
-                <p>
-                  <strong>Gênero: </strong>
-                  {pet.breed}
-                </p>
-                <p>{`${pet.helthy.allergy}` ? `${pet.helthy.allergy}` : ""}</p>
-                <p>{`${pet.helthy.disease}` ? `${pet.helthy.disease}` : ""}</p>
-                <p>{`${pet.recomendations}` ? `${pet.recomendations}` : ""}</p>
+                <img src={pet.picture} alt="pet" />
+                <div className="pet-text">
+                  <p>
+                    <strong>Nome: </strong>
+                    {pet.name}
+                  </p>
+                  <p>
+                    <strong>Animal: </strong>
+                    {pet.animal}
+                  </p>
+                  <p>
+                    <strong>Porte: </strong>
+                    {pet.size}
+                  </p>
+                  <p>
+                    <strong>Gênero: </strong>
+                    {pet.genre}
+                  </p>
+                  <p>
+                    {`${pet.helthy.allergy}`
+                      ? `Allergy: ${pet.helthy.allergy}`
+                      : ""}
+                  </p>
+                  <p>
+                    {`${pet.helthy.disease}`
+                      ? `Diseases: ${pet.helthy.disease}`
+                      : ""}
+                  </p>
+                  <p>
+                    {`${pet.recomendations}`
+                      ? `Recomendações: ${pet.recomendations}`
+                      : ""}
+                  </p>
+                </div>
+                <div className="edit-pet-btn">
+                  <Link to={`/pet/${pet._id}`}>
+                    <Btn type="submit" color="laranja" label="Editar" />
+                  </Link>
+                </div>
               </div>
             ))
           : ""}
