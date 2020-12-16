@@ -7,6 +7,7 @@ import AboutPet from "./AboutPet";
 import Agendamentos from "./Agendamentos";
 
 function Dashboard() {
+
 	return (
 		<div className="dash-container">
 			<div className="dashboard">
@@ -25,6 +26,7 @@ function Dashboard() {
 			</div>
 		</div>
 	);
+
 }
 
 export default Dashboard;

@@ -1,0 +1,86 @@
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 0 0;
+}
+
+.cadastro {
+  flex-direction: column;
+  width: 540px;
+  background-color: rgb(194, 221, 230, 0.4);
+  padding: 50px;
+  border-radius: 25px;
+  height: 450px;
+  margin-top: 40px;
+}
+
+.cadastro-pet {
+  margin-top: 20px;
+  padding: 20px 50px 50px 50px;
+}
+
+.cadastro input {
+  padding: 10px 0 10px 15px;
+  border: none;
+  margin: 5px;
+  width: 515px;
+  border-radius: 15px;
+}
+
+.botoes-cadastro {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.botoes-cadastro button {
+  margin: 40px 70px;
+}
+
+.cadastro h2 {
+  color: #4995a6;
+}
+
+.select {
+  color: grey;
+  padding: 10px 0 10px 15px;
+  border: none;
+  margin: 5px;
+  width: 529px;
+  border-radius: 15px;
+}
+
+input[type="file"] {
+  display: none;
+}
+label {
+  padding: 10px 0 10px 15px;
+  width: 101px;
+  background-color: #8bc4d6;
+  font-size: 13px;
+  color: #f4f4f4;
+  display: block;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 15px;
+  font-family: "Arial", sans-serif;
+}
+
+.radio-input-container {
+  width: 530px;
+}
+
+.radio-input {
+  display: flex;
+  flex-direction: row;
+}
+
+.radio-input img {
+  width: 100px;
+}
+
+.google-register {
+  text-decoration: none;
+  color: #4995a6;
+  font-weight: bold;
+}
