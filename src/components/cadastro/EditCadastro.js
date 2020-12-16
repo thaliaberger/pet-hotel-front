@@ -26,7 +26,7 @@ function EditCadastro(props) {
                 console.error(err);
             } 
         }
-        fetchCadastro;
+        fetchCadastro();
     }, [id]);
 
     async function handleSubmit() {
