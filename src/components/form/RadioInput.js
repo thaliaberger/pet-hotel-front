@@ -13,7 +13,7 @@ function RadioInput(props) {
           type="radio"
           id="cat"
           name="animal"
-          value="Cat"
+          value="Gato"
           onChange={props.onChange}
         />
         <img src={cat} alt="cat icon" />
@@ -21,7 +21,7 @@ function RadioInput(props) {
           type="radio"
           id="dog"
           name="animal"
-          value="Dog"
+          value="Cachorro"
           onChange={props.onChange}
         />
         <img src={dog} alt="dog icon" />
@@ -29,7 +29,7 @@ function RadioInput(props) {
           type="radio"
           id="bunny"
           name="animal"
-          value="Rabbit"
+          value="Coelho"
           onChange={props.onChange}
         />
         <img src={bunny} alt="bunny icon " />
@@ -37,7 +37,7 @@ function RadioInput(props) {
           type="radio"
           id="dino"
           name="animal"
-          value="Dinossaur"
+          value="Dinossauro"
           onChange={props.onChange}
         />
         <img src={dino} alt="dinossaur icon" />

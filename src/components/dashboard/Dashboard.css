@@ -45,7 +45,6 @@
 
 .sobre-pet {
   width: 400px;
-
   margin-left: 30px;
 }
 
@@ -55,6 +54,14 @@
 
 .each-pet img {
   margin-bottom: 10px;
+}
+
+.add-pet-btn {
+  margin-left: 40px;
+}
+
+.edit-pet-btn {
+  margin-left: 35px;
 }
 
 /* AGENDA */

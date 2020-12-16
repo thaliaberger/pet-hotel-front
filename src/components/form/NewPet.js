@@ -19,7 +19,7 @@ function NewPet() {
     name: "",
     animal: "",
     size: "",
-    breed: "",
+    genre: "",
     helthy: {
       allergy: [],
       disease: [],
@@ -51,9 +51,9 @@ function NewPet() {
 
   const history = useHistory();
 
-  const size = ["Big", "Medium", "Small"];
+  const size = ["Grande", "Médio", "Pequeno"];
 
-  const breed = ["Macho", "Fêmea"];
+  const genre = ["Macho", "Fêmea"];
 
   function goBack() {
     history.push("/dashboard");
@@ -128,10 +128,10 @@ function NewPet() {
       />
       <SelectInput
         label="Selecionar Gênero"
-        id="breed"
-        name="breed"
-        options={breed}
-        value={state.breed}
+        id="genre"
+        name="genre"
+        options={genre}
+        value={state.genre}
         onChange={handleChange}
       />
       <SimpleInput
