@@ -106,6 +106,17 @@ select:focus {
   transition: 0.2s ease-in-out;
 }
 
+.botao-azul2 {
+  color: #f4f4f4;
+  background-color: #8bc4d6;
+  border-radius: 25px;
+  padding: 5px 15px;
+  font-size: 15px;
+  margin-left: 50px;
+  border: 3px solid #8bc4d6;
+  transition: 0.2s ease-in-out;
+}
+
 .botao-azul:hover {
   color: #69aec4;
   background: none;
@@ -120,8 +131,8 @@ select:focus {
 .mvv {
   display: flex;
 
-	flex-direction: row;
-	justify-content: center;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
   margin-bottom: 80px;
 
@@ -137,7 +148,6 @@ select:focus {
   margin-bottom: 90px;
   font-size: 40px;
   text-shadow: 1px 1px 0px #d5e6eb;
-
 }
 
 .text h3 {

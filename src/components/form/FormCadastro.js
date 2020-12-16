@@ -1,34 +1,33 @@
 import React, { useState } from "react";
-import axios from "axios";
 import { useHistory } from "react-router-dom";
+import api from "../../api/HotelApi";
 
 import SimpleInput from "./SimpleInput";
 import SelectInput from "./SelectInput";
 
-const storedUser = localStorage.getItem("loggedInUser");
-const loggedInUser = JSON.parse(storedUser || '""');
-
 function FormCadastro() {
+    const [ adressState, setAdress] = useState({
+        street: "", 
+        number: "", 
+        complement: "", 
+        city: "", 
+        state: "", 
+        zipcode:""
+    })
+
     const [clientState, setClientState] = useState({
         name: "",
         mobile: "",
-        street: "",
-        number: "",
-        complement: "",
-        city: "",
-        state: "",
-        zipcode:"",
+        adress: adressState,
+        pets: []
     });
+
     const [errors, setErrors] = useState({
         name: null,
         mobile: null,
-        street: null,
-        number: null,
-        complement: null,
-        city: null,
-        state: null,
-        zipcode: null,
+        adreess: {street: null, number: null, complement: null, city: null, state: null, zipcode: null}
     });
+
     const history = useHistory();
 
     const state = ["Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará", "Distrito Federal", "Espírito Santo", "Goiás", "Maranhão", "Mato Grosso", "Mato Grosso do Sul", "Minas Gerais", "Pará", "Paraíba", "Paraná", "Pernambuco", "Piauí", "Rio de Janeiro", "Rio Grande do Norte", "Rio Grande do Sul", "Rondônia", "Roraima", "Santa Catarina", "São Paulo", "Sergipe", "Tocantins"];
@@ -37,12 +36,17 @@ function FormCadastro() {
         setClientState({...clientState, [event.target.name] : event.target.value});
     }
 
+    function handleChangeAdress(event) {
+        setAdress({...adressState, [event.target.name] : event.target.value});
+        setClientState({...clientState, adress:adressState});
+    }
+
     async function handleSubmit(event) {
         event.preventDefault();
         try {
-            const response = await axios.post(
-                "http://ec2-52-14-163-166.us-east-2.compute.amazonaws.com/api/client/",
-                clientState                
+            const response = await api.post(
+                "/client/",
+                clientState              
             );
             console.log(response.data);
             history.push("/dashboard");
@@ -79,32 +83,32 @@ function FormCadastro() {
             name="street"
             label="Rua"
             type="text"
-            value={clientState.street}
-            onChange={handleChange}
+            value={adressState.street}
+            onChange={handleChangeAdress}
             error={errors.street}
             />
             <SimpleInput
             name="number"
             label="Número"
             type="text"
-            value={clientState.number}
-            onChange={handleChange}
+            value={adressState.number}
+            onChange={handleChangeAdress}
             error={errors.number}
             />
             <SimpleInput
             name="complement"
             label="Complemento"
             type="text"
-            value={clientState.complement}
-            onChange={handleChange}
+            value={adressState.complement}
+            onChange={handleChangeAdress}
             error={errors.complement}
             />
             <SimpleInput
             name="city"
             label="Cidade"
             type="text"
-            value={clientState.city}
-            onChange={handleChange}
+            value={adressState.city}
+            onChange={handleChangeAdress}
             error={errors.city}
             />
             <SelectInput
@@ -112,15 +116,15 @@ function FormCadastro() {
             label="Estado"
             id="state"
             options={state}
-            value={clientState.state}
-            onChange={handleChange}
+            value={adressState.state}
+            onChange={handleChangeAdress}
             />          
             <SimpleInput
             name="zipcode"
             label="CEP"
             type="text"
-            value={clientState.zipcode}
-            onChange={handleChange}
+            value={adressState.zipcode}
+            onChange={handleChangeAdress}
             error={errors.zipcode}
             />
             <div className="botoes-cadastro">
