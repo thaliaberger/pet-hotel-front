@@ -36,6 +36,27 @@
   margin-right: 10px;
 }
 
+.delete-btn-div {
+  display: flex;
+  justify-content: center;
+}
+
+.botao-vermelho {
+  background-color: #db5050;
+  color: #f4f4f4;
+  border-radius: 25px;
+  padding: 5px 15px;
+  font-size: 15px;
+  border: 3px solid #db5050;
+  margin: 20px 0;
+  transition: 0.2s ease-in-out;
+}
+
+.botao-vermelho:hover {
+  color: #db5050;
+  background: none;
+}
+
 .botoes-cadastro button {
   margin: 40px 70px;
 }
