@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import api from "../../api/HotelApi";
 
+import LogoNavbar from "../dashboard/LogoNavbar";
 import FormPet from "../form/FormPet";
 
 function EditPet(props) {
@@ -33,7 +34,10 @@ function EditPet(props) {
     async function fetchPet() {
       try {
         const response = await api.get(`/pet/${id}`);
-        setState({ ...response.data.pet[0] });
+
+        setState({
+          ...response.data.pet[0],
+        });
       } catch (err) {
         console.error(err);
       }
@@ -94,23 +98,26 @@ function EditPet(props) {
   }
 
   return (
-    <div className="container">
-      <div className="cadastro2">
-        <h2>Editar Pet</h2>
-        <FormPet
-          state={state}
-          handleChange={handleChange}
-          handleSubmit={handleSubmit}
-          onSubmit={handleSubmit}
-          getAllergyTags={getAllergyTags}
-          getDiseaseTags={getDiseaseTags}
-          goBack={goBack}
-          errors={errors}
-        />
-        <div className="delete-btn-div">
-          <button className="botao-vermelho" type="button" onClick={deletar}>
-            Deletar
-          </button>
+    <div>
+      <LogoNavbar />
+      <div className="container">
+        <div className="cadastro2">
+          <h2>Editar Pet</h2>
+          <FormPet
+            state={state}
+            handleChange={handleChange}
+            handleSubmit={handleSubmit}
+            onSubmit={handleSubmit}
+            getAllergyTags={getAllergyTags}
+            getDiseaseTags={getDiseaseTags}
+            goBack={goBack}
+            errors={errors}
+          />
+          <div className="delete-btn-div">
+            <button className="botao-vermelho" type="button" onClick={deletar}>
+              Deletar
+            </button>
+          </div>
         </div>
       </div>
     </div>
