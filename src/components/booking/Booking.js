@@ -122,6 +122,7 @@ function Booking() {
 									type={el.type}
 									name={el.name}
 									qtd={el.capacity}
+									imageUrl={el.imageUrl}
 									checked={el._id === booking.accommodation_id ? true : false}
 									id={el._id}
 									onClick={handleAccommodation}
