@@ -18,4 +18,4 @@
 
 <p>The website is hosted on AWS. To check it click <a target="_blank" href="http://ec2-52-14-163-166.us-east-2.compute.amazonaws.com/">HERE</a>!</p>
 
-<p>And <a target="_blank" href="https://www.canva.com/design/DAEQb9SvCgU/fI6LmienIauDueBBYCQjEQ/view?utm_content=DAEQb9SvCgU&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink#1">HERE</a> you can find our project presentation!</p>
+<p>And <a target="_blank" href="https://www.canva.com/design/DAEQb9SvCgU/fI6LmienIauDueBBYCQjEQ/view?utm_content=DAEQb9SvCgU&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink#2">HERE</a> you can find our project presentation!</p>
