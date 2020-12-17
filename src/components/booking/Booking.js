@@ -108,6 +108,7 @@ function Booking() {
 			</div>
 			<div>
 				<h3>Selecione uma opção de acomodação:</h3>
+				{console.log(screen.rooms)}
 				{screen.rooms.map((el) => {
 					return (
 						<Accommodation
