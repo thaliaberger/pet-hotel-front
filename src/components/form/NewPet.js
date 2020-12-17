@@ -109,7 +109,6 @@ function NewPet() {
       getAllergyTags={getAllergyTags}
       getDiseaseTags={getDiseaseTags}
       goBack={goBack}
-      error={errors}
     />
   );
 }
