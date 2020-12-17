@@ -5,7 +5,7 @@ import Btn from "./Btn";
 import { AuthContext } from "../../contexts/AuthContext";
 import { useHistory } from "react-router-dom";
 
-function Login() {
+function Login(props) {
 	const [state, setState] = useState({ email: "", password: "" });
 	const authContext = useContext(AuthContext);
 	const history = useHistory();
@@ -29,31 +29,31 @@ function Login() {
 
 			history.push("/dashboard");
 		} catch (error) {
-			console.log(error);
+			props.setError(true);
 		}
 	}
 
-  return (
-    <div className="signin">
-      <form onSubmit={handleSubmit}>
-        <SimpleInput
-          name="email"
-          label="e-mail"
-          type="text"
-          value={state.email}
-          onChange={handleChange}
-        />
-        <SimpleInput
-          name="password"
-          label="Password"
-          type="password"
-          value={state.password}
-          onChange={handleChange}
-        />
-        <Btn type="submit" color="laranja" label="Entrar"/>
-      </form>
-    </div>
-  );
+	return (
+		<div className="signin">
+			<form onSubmit={handleSubmit}>
+				<SimpleInput
+					name="email"
+					label="e-mail"
+					type="text"
+					value={state.email}
+					onChange={handleChange}
+				/>
+				<SimpleInput
+					name="password"
+					label="Password"
+					type="password"
+					value={state.password}
+					onChange={handleChange}
+				/>
+				<Btn type="submit" color="laranja" label="Entrar" />
+			</form>
+		</div>
+	);
 }
 
 export default Login;
