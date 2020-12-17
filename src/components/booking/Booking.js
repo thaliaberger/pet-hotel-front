@@ -114,21 +114,26 @@ function Booking() {
 					<div>
 						<h3>Selecione uma opção de acomodação:</h3>
 
-						{screen.rooms.map((el) => {
-							return (
-								<Accommodation
-									key={el._id}
-									value={el.value}
-									type={el.type}
-									name={el.name}
-									qtd={el.capacity}
-									imageUrl={el.imageUrl}
-									checked={el._id === booking.accommodation_id ? true : false}
-									id={el._id}
-									onClick={handleAccommodation}
-								/>
-							);
-						})}
+						{screen.rooms
+							.filter(
+								(thing, index, self) =>
+									index === self.findIndex((t) => t.type === thing.type)
+							)
+							.map((el) => {
+								return (
+									<Accommodation
+										key={el._id}
+										value={el.value}
+										type={el.type}
+										name={el.name}
+										qtd={el.capacity}
+										imageUrl={el.imageUrl}
+										checked={el._id === booking.accommodation_id ? true : false}
+										id={el._id}
+										onClick={handleAccommodation}
+									/>
+								);
+							})}
 						<div>
 							<h3>Resumo da Reserva</h3>
 							<p>Diárias: {booking.days}</p>
