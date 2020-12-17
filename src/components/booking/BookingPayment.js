@@ -2,10 +2,13 @@ import React, { useEffect, useState } from "react";
 import SimpleInput from "../form/SimpleInput";
 import Btn from "../form/Btn";
 import api from "../../api/HotelApi";
+import { useHistory } from "react-router-dom";
+import Loading from "../loading/Loading";
 
 import "./Booking.css";
 
 function BoookingPayment(props) {
+	const history = useHistory();
 	const { id } = props.match.params;
 	const [loading, setLoading] = useState(false);
 	const [errors, setErrors] = useState("");
@@ -22,6 +25,7 @@ function BoookingPayment(props) {
 		expiryDate: "",
 		cvc: "",
 	});
+	const [loading, setLoading] = useState(false);
 
 	function handleChange(event) {
 		setState({
@@ -41,7 +45,9 @@ function BoookingPayment(props) {
 		) {
 			setErrors("Verifique os dados antes de continuar!");
 		} else {
+			setLoading(true);
 			const result = await api.post("/payment", booking);
+			history.push("/dashboard");
 		}
 	}
 
@@ -115,6 +121,7 @@ function BoookingPayment(props) {
 				<Btn targetUrl="/dashboard" label="Voltar" color="azul" />
 				<Btn type="submit" label="Efetuar o Pagamento" color="laranja" />
 				{errors}
+				{loading ? <Loading /> : <></>}
 			</form>
 		</div>
 	);
