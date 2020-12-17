@@ -8,6 +8,7 @@ import Loading from "../loading/Loading";
 import "./Booking.css";
 
 function BookingPayment(props) {
+<<<<<<< HEAD
   const history = useHistory();
   const { id } = props.match.params;
   const [loading, setLoading] = useState(false);
@@ -25,6 +26,25 @@ function BookingPayment(props) {
     expiryDate: "",
     cvc: "",
   });
+=======
+	const history = useHistory();
+	const { id } = props.match.params;
+	const [loading, setLoading] = useState(false);
+	const [errors, setErrors] = useState("");
+	const [booking, setBooking] = useState({
+		startDate: "",
+		endDate: "",
+		pets: [],
+		value: "",
+		booking_id: id,
+	});
+	const [state, setState] = useState({
+		cardHoldName: "",
+		cardNumber: "",
+		expiryDate: "",
+		cvc: "",
+	});
+>>>>>>> master
 
   function handleChange(event) {
     setState({
@@ -36,6 +56,7 @@ function BookingPayment(props) {
   async function handleSubmit(event) {
     event.preventDefault();
 
+<<<<<<< HEAD
     if (
       !state.cardHoldName ||
       !state.cardNumber ||
@@ -50,6 +71,22 @@ function BookingPayment(props) {
       history.push("/dashboard");
     }
   }
+=======
+		if (
+			!state.cardHoldName ||
+			!state.cardNumber ||
+			!state.cvc ||
+			!state.expiryDate
+		) {
+			setErrors("Verifique os dados antes de continuar!");
+		} else {
+			setErrors("");
+			setLoading(true);
+			const result = await api.post("/payment", {booking});
+			history.push("/dashboard");
+		}
+	}
+>>>>>>> master
 
   useEffect(() => {
     async function fetchBooking() {
