@@ -1,7 +1,13 @@
 import React from "react";
+import "./Loading.css";
 
 function Loading() {
-	return <>waiting for the rabbit</>;
+	return (
+		<>
+			<div class="rabbit"></div>
+			<div class="clouds"></div>
+		</>
+	);
 }
 
 export default Loading;
