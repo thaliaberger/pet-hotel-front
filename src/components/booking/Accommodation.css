@@ -1,12 +1,21 @@
 .container-accommodation {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 10px 0;
   width: 100%;
   cursor: pointer;
   background-color: rgba(215, 232, 238, 0.4);
-  padding: 20px;
+  padding: 0 20px 30px 20px;
   border-radius: 25px;
+}
+
+.container-accommodation h4 {
+  color: #4995a6;
+}
+
+.container-accommodation-selected h4 {
+  color: #4995a6;
 }
 
 .container-accommodation:hover {
@@ -20,10 +29,18 @@
   width: 100%;
   cursor: pointer;
   background-color: rgba(174, 208, 221, 0.4);
-  padding: 20px;
+  padding: 0 20px 30px 20px;
   border-radius: 25px;
 }
 
 .room-img {
-  width: 200px;
+  width: 180px;
+  margin-right: 20px;
+}
+
+.room-all-info {
+  width: 420px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
