@@ -5,10 +5,11 @@ import api from "../../api/HotelApi";
 import { useHistory } from "react-router-dom";
 import Loading from "../loading/Loading";
 
+import LogoNavbar from "../dashboard/LogoNavbar";
+
 import "./Booking.css";
 
 function BookingPayment(props) {
-<<<<<<< HEAD
   const history = useHistory();
   const { id } = props.match.params;
   const [loading, setLoading] = useState(false);
@@ -26,25 +27,6 @@ function BookingPayment(props) {
     expiryDate: "",
     cvc: "",
   });
-=======
-	const history = useHistory();
-	const { id } = props.match.params;
-	const [loading, setLoading] = useState(false);
-	const [errors, setErrors] = useState("");
-	const [booking, setBooking] = useState({
-		startDate: "",
-		endDate: "",
-		pets: [],
-		value: "",
-		booking_id: id,
-	});
-	const [state, setState] = useState({
-		cardHoldName: "",
-		cardNumber: "",
-		expiryDate: "",
-		cvc: "",
-	});
->>>>>>> master
 
   function handleChange(event) {
     setState({
@@ -56,7 +38,6 @@ function BookingPayment(props) {
   async function handleSubmit(event) {
     event.preventDefault();
 
-<<<<<<< HEAD
     if (
       !state.cardHoldName ||
       !state.cardNumber ||
@@ -67,26 +48,10 @@ function BookingPayment(props) {
     } else {
       setErrors("");
       setLoading(true);
-      const result = await api.post("/payment", booking);
+      const result = await api.post("/payment", { booking });
       history.push("/dashboard");
     }
   }
-=======
-		if (
-			!state.cardHoldName ||
-			!state.cardNumber ||
-			!state.cvc ||
-			!state.expiryDate
-		) {
-			setErrors("Verifique os dados antes de continuar!");
-		} else {
-			setErrors("");
-			setLoading(true);
-			const result = await api.post("/payment", {booking});
-			history.push("/dashboard");
-		}
-	}
->>>>>>> master
 
   useEffect(() => {
     async function fetchBooking() {
@@ -102,65 +67,70 @@ function BookingPayment(props) {
   }, [id, props.history]);
 
   return (
-    <div className="content">
-      <h3>Dados da Reserva</h3>
-      <div>
-        <p>
-          Período:{" "}
-          {booking.startDate
-            .toString()
-            .substring(0, 10)
-            .split("-")
-            .reverse()
-            .join("/")}{" "}
-          a{" "}
-          {booking.endDate
-            .toString()
-            .substring(0, 10)
-            .split("-")
-            .reverse()
-            .join("/")}
-        </p>
-        <p>Hóspedes: {booking.pets.length} </p>
-        <p>Valor: {booking.value}</p>
-      </div>
-      <h3>Dados do Cartão</h3>
-      <form onSubmit={handleSubmit}>
-        <SimpleInput
-          name="cardHoldName"
-          label="Nome do dono do cartão"
-          type="text"
-          value={state.cardHoldName}
-          onChange={handleChange}
-        />
-        <SimpleInput
-          name="cardNumber"
-          label="Número do cartão"
-          type="number"
-          value={state.cardNumber}
-          onChange={handleChange}
-        />
-        <SimpleInput
-          name="expiryDate"
-          label="Data de vencimento"
-          type="text"
-          value={state.expiryDate}
-          onChange={handleChange}
-        />
-        <SimpleInput
-          name="cvc"
-          label="CVC"
-          type="number"
-          value={state.cvc}
-          onChange={handleChange}
-        />
-        <div>
-          <Btn targetUrl="/dashboard" label="Voltar" color="azul" />
-          <Btn type="submit" label="Efetuar o Pagamento" color="laranja" />
-          {errors}
-          {loading ? <Loading /> : <></>}
+    <div>
+      <LogoNavbar />
+      <div className="container">
+        <div className="payment-content">
+          <h3>Dados da Reserva</h3>
+          <div>
+            <p>
+              Período:{" "}
+              {booking.startDate
+                .toString()
+                .substring(0, 10)
+                .split("-")
+                .reverse()
+                .join("/")}{" "}
+              a{" "}
+              {booking.endDate
+                .toString()
+                .substring(0, 10)
+                .split("-")
+                .reverse()
+                .join("/")}
+            </p>
+            <p>Hóspedes: {booking.pets.length} </p>
+            <p>Valor: {booking.value}</p>
+          </div>
+          <h3>Dados do Cartão</h3>
+          <form onSubmit={handleSubmit}>
+            <SimpleInput
+              name="cardHoldName"
+              label="Nome do dono do cartão"
+              type="text"
+              value={state.cardHoldName}
+              onChange={handleChange}
+            />
+            <SimpleInput
+              name="cardNumber"
+              label="Número do cartão"
+              type="number"
+              value={state.cardNumber}
+              onChange={handleChange}
+            />
+            <SimpleInput
+              name="expiryDate"
+              label="Data de vencimento"
+              type="text"
+              value={state.expiryDate}
+              onChange={handleChange}
+            />
+            <SimpleInput
+              name="cvc"
+              label="CVC"
+              type="number"
+              value={state.cvc}
+              onChange={handleChange}
+            />
+            {loading ? <Loading /> : <></>}
+            {errors}
+            <div className="payment-btns">
+              <Btn targetUrl="/dashboard" label="Voltar" color="azul" />
+              <Btn type="submit" label="Efetuar o Pagamento" color="laranja" />
+            </div>
+          </form>
         </div>
-      </form>
+      </div>
     </div>
   );
 }
