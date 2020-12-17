@@ -4,6 +4,7 @@ import api from "../../api/HotelApi";
 
 import LogoNavbar from "../dashboard/LogoNavbar";
 import FormPet from "../form/FormPet";
+import Btn from "../form/Btn";
 
 function EditPet(props) {
   const [allergyTags, setAllergyTags] = useState([]);
@@ -92,11 +93,6 @@ function EditPet(props) {
     history.push("/dashboard");
   }
 
-  function deletar() {
-    api.delete(`/pet/${id}`);
-    props.history.push("/dashboard");
-  }
-
   return (
     <div>
       <LogoNavbar />
@@ -114,9 +110,11 @@ function EditPet(props) {
             errors={errors}
           />
           <div className="delete-btn-div">
-            <button className="botao-vermelho" type="button" onClick={deletar}>
-              Deletar
-            </button>
+            <Btn
+              targetUrl={`/pet/delete/${state._id}`}
+              color="vermelho"
+              label="Deletar"
+            />
           </div>
         </div>
       </div>

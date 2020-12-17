@@ -27,7 +27,7 @@ function Agendamentos() {
         <p>Nenhum Agendamento</p>
       ) : (
         state.map((el) => (
-          <div key={el._id}>
+          <div className="each-agendamento" key={el._id}>
             <p>
               Período:{" "}
               {el.startDate
@@ -48,12 +48,21 @@ function Agendamentos() {
             {el.payment ? (
               <p>Reserva confirmada</p>
             ) : (
-              <div className="payment-btn">
-                <Btn
-                  targetUrl="/payment"
-                  label="Efetuar pagamento"
-                  color="laranja"
-                />
+              <div>
+                <div className="payment-btn">
+                  <Btn
+                    targetUrl={`/booking/payment/${el._id}`}
+                    label="Efetuar pagamento"
+                    color="azul"
+                  />
+                </div>
+                <div className="cancel-btn">
+                  <Btn
+                    targetUrl={`/booking/delete/${el._id}`}
+                    label="Cancelar reserva"
+                    color="laranja"
+                  />
+                </div>
               </div>
             )}
           </div>
