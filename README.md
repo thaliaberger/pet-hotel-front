@@ -6,7 +6,7 @@
 
 <h3>The Project</h3>
 
-<img src="images/telaInicial.png" alt="Website homepage" />
+<img src="./src/images/telaInicial.png" alt="Website homepage" />
 
 <p>Our project consists on a website of a hotel for pets, with a homepage that contains information about the hotel, pages to register the client, their pets, to book the reservation, and a page that centralizes all this information.</p>
 <p>The client can register their pets, make the reservation and manage their accomodation.</p>
@@ -15,8 +15,6 @@
 <p>We chose this theme because of our desire to work with something related to pets, and the hotel was the project that we most indetified with.</p>
 
 <h3>Where you can find our project</h3>
-
-<p>The website was deployed on Vercel. Click <a target="_blank" href="https://pet-hotel.vercel.app/">HERE</a> to access the page!</p>
 
 <p>It was also hosted on AWS. Check it clicking <a target="_blank" href="http://ec2-52-14-163-166.us-east-2.compute.amazonaws.com/">HERE</a>!</p>
 
