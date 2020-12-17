@@ -46,7 +46,10 @@ function BookingPayment(props) {
 		} else {
 			setErrors("");
 			setLoading(true);
-			const result = await api.post("/payment", {booking});
+			const result = await api.post("/payment", {
+				booking_id: id,
+				value: booking.value,
+			});
 			history.push("/dashboard");
 		}
 	}
