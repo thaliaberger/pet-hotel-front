@@ -1,56 +1,90 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import { useHistory } from "react-router-dom";
+import api from "../../api/HotelApi";
 
 import FormCadastro from "../form/FormCadastro";
 
 function EditCadastro(props) {
-  const [state, setState] = useState({
-    name: "",
-    mobile: "",
-    street: "",
-    number: "",
-    complement: "",
-    city: "",
-    state: "",
-    zipcode: "",
-  });
+  
+    const [ adressState, setAdress] = useState({
+        street: "", 
+        number: "", 
+        complement: "", 
+        city: "", 
+        state: "", 
+        zipcode:""
+    })
 
-  const { id } = props.match.params;
+    const [clientState, setClientState] = useState({
+        name: "",
+        mobile: "",
+        adress: adressState,
+        pets: []
+    });
 
-  useEffect(() => {
-    async function fetchCadastro() {
-      try {
-        const response = await axios.get(
-          `http://ec2-52-14-163-166.us-east-2.compute.amazonaws.com/api/client/${id}`
-        );
-        setState({ ...response.data });
-      } catch (err) {
-        console.error(err);
-      }
+    const [errors, setErrors] = useState({
+        name: null,
+        mobile: null,
+        adreess: {street: null, number: null, complement: null, city: null, state: null, zipcode: null}
+    });
+    
+    const { id } = props.match.params;
+
+    useEffect(() => {
+        async function fetchCadastro() {
+            try {
+                const response = await api.get("/client/");
+                setClientState({...response.data.user});
+                setAdress({...response.data.user.adress});
+            } catch(err) {
+                console.error(err);
+            } 
+        }
+        fetchCadastro();
+    }, [id]);
+
+    async function handleSubmit() {
+        try {
+            const response = await api.patch("/client/", clientState);
+            console.log(response);
+            props.history.push("/dashboard");
+        } catch(err) {
+            console.error(err);
+        }
     }
-    fetchCadastro();
-  }, [id]);
 
-  async function handleSubmit() {
-    try {
-      const response = await axios.patch(`api/client/${id}`, state);
-
-      props.history.push("/dashboard");
-    } catch (err) {
-      console.error(err);
+    function handleChange(event) {
+        setClientState({...clientState, [event.target.name] : event.target.value});
     }
-  }
 
-  return (
-    <div>
-      <h2>Edite suas informações</h2>
-      <FormCadastro
-        state={state}
-        setState={setState}
-        handleSubmit={handleSubmit}
-      />
-    </div>
-  );
+    function handleChangeAdress(event) {
+        setAdress({...adressState, [event.target.name] : event.target.value});
+        setClientState({...clientState, adress:adressState});
+    }
+
+    const history = useHistory();
+
+    function goBack() {
+        history.push("/dashboard");
+    }
+
+    return(
+        <div className="container">
+            <div className="cadastro">
+                <h2>Edite suas informações</h2>
+                <FormCadastro
+                clientState={clientState}
+                adressState={adressState}
+                handleChange={handleChange}
+                handleChangeAdress={handleChangeAdress}
+                onSubmit={handleSubmit}
+                goBack={goBack}
+                errors={errors}
+                />
+            </div>
+        </div>
+       
+    );
 }
 
 export default EditCadastro;
