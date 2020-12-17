@@ -13,7 +13,6 @@ function AboutPet() {
     async function fetchPets() {
       try {
         const response = await api.get("/pet");
-        console.log(response);
         setPets({ ...response.data });
       } catch (err) {
         console.error(err.response);
@@ -47,19 +46,22 @@ function AboutPet() {
                     {pet.genre}
                   </p>
                   <p>
-                    {`${pet.helthy.allergy}`
-                      ? `Allergy: ${pet.helthy.allergy}`
-                      : ""}
+                    <strong>
+                      {`${pet.helthy.allergy}` ? "Alergias: " : ""}{" "}
+                    </strong>
+                    {`${pet.helthy.allergy}` ? `${pet.helthy.allergy}` : ""}
                   </p>
                   <p>
-                    {`${pet.helthy.disease}`
-                      ? `Diseases: ${pet.helthy.disease}`
-                      : ""}
+                    <strong>
+                      {`${pet.helthy.disease}` ? "Doenças: " : ""}{" "}
+                    </strong>
+                    {`${pet.helthy.disease}` ? `${pet.helthy.disease}` : ""}
                   </p>
                   <p>
-                    {`${pet.recomendations}`
-                      ? `Recomendações: ${pet.recomendations}`
-                      : ""}
+                    <strong>
+                      {`${pet.recomendations}` ? "Recomendações: " : ""}{" "}
+                    </strong>
+                    {`${pet.recomendations}` ? `${pet.recomendations}` : ""}
                   </p>
                 </div>
                 <div className="edit-pet-btn">

@@ -3,7 +3,6 @@ import { useHistory } from "react-router-dom";
 import FormPet from "./FormPet";
 
 import api from "../../api/HotelApi";
-
 import "./TagInput.css";
 
 function NewPet() {
@@ -43,6 +42,9 @@ function NewPet() {
   const [errors, setErrors] = useState({
     name: null,
     animal: null,
+    genre: null,
+    size: null,
+    picture: null,
   });
 
   const history = useHistory();
@@ -95,6 +97,7 @@ function NewPet() {
       history.push("/dashboard");
     } catch (error) {
       console.log(error.response);
+      setErrors({ ...error.response.data.errors });
     }
   }
 
@@ -106,7 +109,6 @@ function NewPet() {
       getAllergyTags={getAllergyTags}
       getDiseaseTags={getDiseaseTags}
       goBack={goBack}
-      errors={errors}
     />
   );
 }

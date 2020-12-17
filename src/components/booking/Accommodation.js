@@ -7,8 +7,9 @@ function Accommodation(props) {
 			role="button"
 			id={props.id}
 			tabIndex={0}
-			className="container-accommodation"
+			className={`container-accommodation${props.checked ? `-selected` : ``}`}
 			onClick={props.onClick}
+			preco={props.value}
 		>
 			{props.name}
 			<div className="">

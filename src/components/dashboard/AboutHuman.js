@@ -11,11 +11,17 @@ const storedUser = localStorage.getItem("loggedInUser");
 const loggedInUser = JSON.parse(storedUser || '""');
 
 function AboutHuman() {
-
   const [humanState, setHumanState] = useState({
     name: null,
     mobile: null,
-    adress: {street: null, number: null, complement: null, city: null, state: null, zipcode: null}
+    adress: {
+      street: null,
+      number: null,
+      complement: null,
+      city: null,
+      state: null,
+      zipcode: null,
+    },
   });
 
   const history = useHistory();
@@ -24,8 +30,10 @@ function AboutHuman() {
     async function fetchHuman() {
       try {
         const response = await api.get("/client");
-        setHumanState({...response.data.user});
-      } catch(err) {
+        if (response.data.user) {
+          setHumanState({ ...response.data.user });
+        }
+      } catch (err) {
         console.error(err.response);
       }
     }
@@ -38,29 +46,31 @@ function AboutHuman() {
     <div className="sobre-humano">
       <div>
         <h2>Meu Perfil</h2>
-              <div>
-                <div>
-                  <p>
-                    <strong>Nome: </strong>
-                    {humanState.name}
-                  </p>
-                  <p>
-                    <strong>Telefone: </strong>
-                    {humanState.mobile}
-                  </p>
-                  <p>
-                    <strong>Endereço: </strong>
-                    {humanState.adress.street}, {humanState.adress.number}, {humanState.adress.complement}</p>
-                    <p>{humanState.adress.city}, {humanState.adress.state}</p>
-                    <p>CEP: {humanState.adress.zipcode}
-                  </p>
-                </div>
-              </div>
+        <div>
+          <div>
+            <p>
+              <strong>Nome: </strong>
+              {humanState.name}
+            </p>
+            <p>
+              <strong>Telefone: </strong>
+              {humanState.mobile}
+            </p>
+            <p>
+              <strong>Endereço: </strong>
+              {humanState.adress.street}, {humanState.adress.number},{" "}
+              {humanState.adress.complement}
+            </p>
+            <p>
+              {humanState.adress.city}, {humanState.adress.state}
+            </p>
+            <p>CEP: {humanState.adress.zipcode}</p>
+          </div>
+        </div>
       </div>
       {humanState.name === null ? (<Btn targetUrl="/cadastro" color="azul" label="Fazer cadastro" />) : (<Link to={`/cadastro/edit/${loggedInUser.user._id}`}><Btn type="submit" color="laranja" label="Editar" /></Link>)}
     </div>
   );
-
 }
 
 export default AboutHuman;

@@ -59,11 +59,20 @@
 
 .each-pet {
   width: 250px;
-  margin: 40px 0;
+  margin: 40px 5px;
+  background-color: rgba(215, 232, 238, 0.4);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 10px 0 10px;
+}
+
+.each-pet:hover {
+  background-color: rgba(174, 208, 221, 0.4);
 }
 
 .each-pet img {
-  margin-left: 50px;
   margin-bottom: 10px;
 }
 
@@ -71,11 +80,6 @@
   display: flex;
   justify-content: center;
 }
-
-.edit-pet-btn {
-  margin-left: 88px;
-}
-
 .all-pets {
   display: flex;
   flex-direction: row;
@@ -86,8 +90,14 @@
   height: 180px;
 }
 
-/* AGENDA */
+/* AGENDAMENTO */
 
-.agendamentos {
-  margin-bottom: 140px;
+.payment-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.agenda-btn {
+  display: flex;
+  justify-content: center;
 }
