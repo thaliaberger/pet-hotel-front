@@ -46,7 +46,7 @@ function Agendamentos() {
             </p>
             <p>Hóspedes: {el.pets.length} </p>
             {el.payment ? (
-              <p>Reserva confirmada</p>
+              <p className="reserva-confirmada">Reserva confirmada</p>
             ) : (
               <div>
                 <div className="payment-btn">

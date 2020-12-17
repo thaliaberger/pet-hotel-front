@@ -26,7 +26,7 @@ function AboutPet() {
       <div className="all-pets">
         {pets.pets
           ? pets.pets.map((pet) => (
-              <div className="each-pet">
+              <div className="each-pet" key={pet._id}>
                 <img src={pet.picture} alt="pet" />
                 <div className="pet-text">
                   <p>
