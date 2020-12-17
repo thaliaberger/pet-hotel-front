@@ -59,7 +59,7 @@
 
 .each-pet {
   width: 250px;
-  margin: 40px 0;
+  margin: 40px 5px;
   background-color: rgba(215, 232, 238, 0.4);
   border-radius: 20px;
   display: flex;
@@ -90,8 +90,14 @@
   height: 180px;
 }
 
-/* AGENDA */
+/* AGENDAMENTO */
 
-.agendamentos {
-  margin-bottom: 140px;
+.payment-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.agenda-btn {
+  display: flex;
+  justify-content: center;
 }

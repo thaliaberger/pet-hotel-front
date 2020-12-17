@@ -16,6 +16,10 @@ import simba from "../../images/simba.jpg";
 import missaoImg from "../../images/missaoImg.jpg";
 import visaoImg from "../../images/visaoImg.jpg";
 import valoresImg from "../../images/valoresImg.jpg";
+import pringles from "../../images/pringles.jpeg";
+import suki from "../../images/suki.jpeg";
+import linhaca from "../../images/linhaça.jpeg";
+import tofu from "../../images/tofu.jpeg";
 
 function Homepage() {
   return (
@@ -137,6 +141,27 @@ function Homepage() {
             <p>Earl</p>
           </div>
         </div>
+        <div className="client-pets">
+          <div className="client-pet">
+            <img className="pet-img" src={pringles} alt="pringles" />
+            <p>Pringles</p>
+          </div>
+
+          <div className="client-pet">
+            <img className="pet-img" src={tofu} alt="tofu" />
+            <p>Tofu</p>
+          </div>
+
+          <div className="client-pet">
+            <img className="pet-img" src={suki} alt="suki" />
+            <p>Suki</p>
+          </div>
+
+          <div className="client-pet">
+            <img className="pet-img" src={linhaca} alt="linhaca" />
+            <p>Linhaça</p>
+          </div>
+        </div>
       </div>
 
       <div className="footer">
@@ -145,14 +170,28 @@ function Homepage() {
             Projeto desenvolvido para o bootcamp de Web Development da IRONHACK.
           </p>
           <div className="footer-links">
-
-            <a className="footer-link" target="_blank" rel="noreferrer" href="https://github.com/rodrigomatosrj">
+            <a
+              className="footer-link"
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/rodrigomatosrj"
+            >
               Rodrigo Matos | GitHub
             </a>
-            <a className="footer-link" target="_blank" rel="noreferrer" href="https://github.com/lauraferraz5">
+            <a
+              className="footer-link"
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/lauraferraz5"
+            >
               Laura Ferraz | GitHub
             </a>
-            <a className="footer-link" target="_blank" rel="noreferrer" href="https://github.com/thaliaberger">
+            <a
+              className="footer-link"
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/thaliaberger"
+            >
               Thalía Berger | GitHub
             </a>
           </div>
