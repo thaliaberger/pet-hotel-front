@@ -25,7 +25,6 @@ function BoookingPayment(props) {
 		expiryDate: "",
 		cvc: "",
 	});
-	const [loading, setLoading] = useState(false);
 
 	function handleChange(event) {
 		setState({
@@ -45,6 +44,7 @@ function BoookingPayment(props) {
 		) {
 			setErrors("Verifique os dados antes de continuar!");
 		} else {
+            setErrors("");
 			setLoading(true);
 			const result = await api.post("/payment", booking);
 			history.push("/dashboard");
