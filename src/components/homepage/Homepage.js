@@ -33,7 +33,7 @@ function Homepage() {
       <div className="mvv-container">
         <h2>O Hotel</h2>
         <div className="mvv">
-          <div className="dinossauro">
+          <div className="each-column">
             <img src={missaoImg} alt="Missão" />
             <div className="text">
               <h3>Missão</h3>
@@ -45,7 +45,7 @@ function Homepage() {
               </p>
             </div>
           </div>
-          <div className="dinossauro">
+          <div className="each-column">
             <div className="text">
               <h3>Visão</h3>
               <p>
@@ -57,7 +57,7 @@ function Homepage() {
             </div>
             <img src={visaoImg} alt="Visão" />
           </div>
-          <div className="dinossauro">
+          <div className="each-column">
             <img src={valoresImg} alt="Valores" />
             <div className="text">
               <h3>Valores</h3>

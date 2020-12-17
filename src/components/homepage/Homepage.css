@@ -96,6 +96,22 @@ select:focus {
   background: none;
 }
 
+.botao-vermelho {
+  background-color: #db5050;
+  color: #f4f4f4;
+  border-radius: 25px;
+  padding: 5px 15px;
+  font-size: 15px;
+  border: 3px solid #db5050;
+  margin: 20px 0;
+  transition: 0.2s ease-in-out;
+}
+
+.botao-vermelho:hover {
+  color: #db5050;
+  background: none;
+}
+
 .botao-azul {
   color: #f4f4f4;
   background-color: #8bc4d6;
@@ -114,7 +130,7 @@ select:focus {
 /* MISSION, VISION AND VALUES */
 
 .mvv-container {
-  margin: 150px 0 150px 0;
+  margin: 150px 0 100px 0;
 }
 
 .mvv {
@@ -162,12 +178,12 @@ select:focus {
   height: 230px;
 }
 
-.dinossauro img {
+.each-column img {
   height: 260px;
   width: 280px;
 }
 
-.dinossauro {
+.each-column {
   display: flex;
   flex-direction: column;
 }
@@ -240,7 +256,7 @@ select:focus {
   background-color: rgb(239, 250, 255, 0.2);
   border-radius: 25px;
   padding: 40px 20px 30px 20px;
-  margin: 50px 20px 0 20px;
+  margin: 50px 50px 0 50px;
   height: 150px;
   width: 150px;
 }
