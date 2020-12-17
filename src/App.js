@@ -9,33 +9,42 @@ import Dashboard from "./components/dashboard/Dashboard";
 import { AuthContextComponent } from "./contexts/AuthContext";
 import PrivateRoute from "./routes/PrivateRoute";
 
-
-
-
 import Cadastro from "./components/cadastro/Cadastro";
 import EditCadastro from "./components/cadastro/EditCadastro";
 import Booking from "./components/booking/Booking";
 import EditPet from "./components/cadastro/EditPet";
+import BookingDelete from "./components/booking/BookingDelete";
+import BookingPayment from "./components/booking/BookingPayment";
 
 function App() {
-  return (
-    <div className="">
-      <BrowserRouter>
-        <AuthContextComponent>
-          <Switch>
-            <Route exact path="/" component={Homepage} />
-            <Route exact path="/register" component={Register} />
-            <Route exact path="/cadastro" component={Cadastro} />
-            <Route exact path="/cadastro/edit/:id" component={EditCadastro} />
-            <PrivateRoute exact path="/novo-pet" component={CadastroPet} />
-            <PrivateRoute exact path="/dashboard" component={Dashboard} />
-            <PrivateRoute exact path="/booking" component={Booking} />
-            <PrivateRoute exat path="/pet/:id" component={EditPet} />
-          </Switch>
-        </AuthContextComponent>
-      </BrowserRouter>
-    </div>
-  );
+	return (
+		<div className="">
+			<BrowserRouter>
+				<AuthContextComponent>
+					<Switch>
+						<Route exact path="/" component={Homepage} />
+						<Route exact path="/register" component={Register} />
+						<Route exact path="/cadastro" component={Cadastro} />
+						<Route exact path="/cadastro/edit/:id" component={EditCadastro} />
+						<PrivateRoute exact path="/novo-pet" component={CadastroPet} />
+						<PrivateRoute exact path="/dashboard" component={Dashboard} />
+						<PrivateRoute exact path="/booking" component={Booking} />
+						<PrivateRoute
+							exact
+							path="/booking/delete/:id"
+							component={BookingDelete}
+						/>
+						<PrivateRoute
+							exact
+							path="/booking/payment/:id"
+							component={BookingPayment}
+						/>
+						<PrivateRoute exat path="/pet/:id" component={EditPet} />
+					</Switch>
+				</AuthContextComponent>
+			</BrowserRouter>
+		</div>
+	);
 }
 
 export default App;
