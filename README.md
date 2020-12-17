@@ -6,7 +6,7 @@
 
 <h3>The Project</h3>
 
-<img src="./images/telaInicial.png" alt="Website homepage" />
+<img src="./src/images/telaInicial.png" alt="Website homepage" />
 
 <p>Our project consists on a website of a hotel for pets, with a homepage that contains information about the hotel, pages to register the client, their pets, to book the reservation, and a page that centralizes all this information.</p>
 <p>The client can register their pets, make the reservation and manage their accomodation.</p>
