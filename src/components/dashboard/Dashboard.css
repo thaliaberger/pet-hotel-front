@@ -95,9 +95,22 @@
 .payment-btn {
   display: flex;
   justify-content: center;
+  margin-top: 50px;
+}
+.cancel-btn {
+  display: flex;
+  justify-content: center;
 }
 
 .agenda-btn {
   display: flex;
   justify-content: center;
+  margin-top: 20px;
+}
+
+.each-agendamento {
+  background-color: rgba(215, 232, 238, 0.4);
+  border-radius: 20px;
+  padding: 10px 20px 0 20px;
+  margin-bottom: 10px;
 }
