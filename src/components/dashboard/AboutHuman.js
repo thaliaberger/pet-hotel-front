@@ -3,6 +3,13 @@ import { useState, useEffect } from "react/cjs/react.development";
 import { useHistory } from "react-router-dom";
 import api from "../../api/HotelApi";
 
+import { Link } from "react-router-dom";
+import Btn from "../form/Btn";
+
+const storedUser = localStorage.getItem("loggedInUser");
+
+const loggedInUser = JSON.parse(storedUser || '""');
+
 function AboutHuman() {
   const [humanState, setHumanState] = useState({
     name: null,
@@ -61,6 +68,7 @@ function AboutHuman() {
           </div>
         </div>
       </div>
+      {humanState.name === null ? (<Btn targetUrl="/cadastro" color="azul" label="Fazer cadastro" />) : (<Link to={`/cadastro/edit/${loggedInUser.user._id}`}><Btn type="submit" color="laranja" label="Editar" /></Link>)}
     </div>
   );
 }
