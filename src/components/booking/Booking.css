@@ -32,3 +32,37 @@ p {
 .booking-pet-pic img {
   width: 200px;
 }
+
+/* PAYMENT */
+
+.payment-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  width: 800px;
+  background-color: rgb(194, 221, 230, 0.4);
+  padding: 30px 50px;
+  border-radius: 25px;
+  margin-top: 20px;
+}
+
+.payment-content h3,
+p {
+  color: #4995a6;
+}
+
+.payment-content input {
+  padding: 10px;
+  border: none;
+  margin: 5px;
+  width: 295px;
+  border-radius: 15px;
+}
+
+.payment-btns {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: 30px;
+}
