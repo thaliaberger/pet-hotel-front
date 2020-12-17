@@ -7,7 +7,7 @@ import Loading from "../loading/Loading";
 
 import "./Booking.css";
 
-function BoookingPayment(props) {
+function BookingPayment(props) {
 	const history = useHistory();
 	const { id } = props.match.params;
 	const [loading, setLoading] = useState(false);
@@ -44,9 +44,9 @@ function BoookingPayment(props) {
 		) {
 			setErrors("Verifique os dados antes de continuar!");
 		} else {
-            setErrors("");
+			setErrors("");
 			setLoading(true);
-			const result = await api.post("/payment", booking);
+			const result = await api.post("/payment", {booking});
 			history.push("/dashboard");
 		}
 	}
@@ -127,4 +127,4 @@ function BoookingPayment(props) {
 	);
 }
 
-export default BoookingPayment;
+export default BookingPayment;
