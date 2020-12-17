@@ -11,7 +11,7 @@
 <p>Our project consists on a website of a hotel for pets, with a homepage that contains information about the hotel, pages to register the client, their pets, to book the reservation, to make the payment and a page that centralizes all this information.</p>
 <p>The client can register their pets, make the reservation and manage their accomodation.</p>
 <p>The Hotel accepts four types of pets: dog, cat, rabbit and <video src="https://giphy.com/gifs/13pT5ZMDTKiKJO/html5"></video> . The client informs the name, size, gender, allergies, deseases and recommendations about their pets.</p>
-<p>To book a new reservation is very simple. By clicking on the "Agendar estadia" button, the client is redirected to a page where is possible choose the dates and check the available rooms. After that, a page to make the payment will appear. There are three types of room: standard, suite and luxury. </p>
+<p>To book a new reservation is very simple. By clicking on the "Agendar estadia" button, the client is redirected to a page where is possible choose the dates and check the available rooms. After that, a page to make the payment will appear. There are three types of room: standard, suite and luxury.</p>
 <p>We chose this theme because of our desire to work with something related to pets, and the hotel was the project that we most indetified with.</p>
 
 <h2>Where you can find our project</h2>
