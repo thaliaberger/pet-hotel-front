@@ -1,16 +1,25 @@
 .container-accommodation {
-	display: flex;
-	justify-content: center;
-	margin: 0 0;
-	width: 100%;
-	cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+  width: 100%;
+  cursor: pointer;
+  background-color: rgba(215, 232, 238, 0.4);
+  padding: 20px;
+  border-radius: 25px;
+}
+
+.container-accommodation:hover {
+  background-color: rgba(174, 208, 221, 0.4);
 }
 
 .container-accommodation-selected {
-	display: flex;
-	justify-content: center;
-	margin: 0 0;
-	width: 100%;
-	cursor: pointer;
-	background-color: rebeccapurple;
+  display: flex;
+  justify-content: center;
+  margin: 0 0;
+  width: 100%;
+  cursor: pointer;
+  background-color: rgba(174, 208, 221, 0.4);
+  padding: 20px;
+  border-radius: 25px;
 }
