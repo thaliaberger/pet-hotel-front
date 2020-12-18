@@ -68,7 +68,15 @@ function AboutHuman() {
           </div>
         </div>
       </div>
-      {humanState.name === null ? (<Btn targetUrl="/cadastro" color="azul" label="Fazer cadastro" />) : (<Link to={`/cadastro/edit/${loggedInUser.user._id}`}><Btn type="submit" color="laranja" label="Editar" /></Link>)}
+      <div className="about-human-btn">
+        {humanState.name === null ? (
+          <Btn targetUrl="/cadastro" color="azul" label="Fazer cadastro" />
+        ) : (
+          <Link to={`/cadastro/edit/${loggedInUser.user._id}`}>
+            <Btn type="submit" color="laranja" label="Editar" />
+          </Link>
+        )}
+      </div>
     </div>
   );
 }
