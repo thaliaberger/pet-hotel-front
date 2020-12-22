@@ -1,12 +1,10 @@
-import React from "react";
-import { useState, useEffect } from "react/cjs/react.development";
+import React,{ useState, useEffect }  from "react";
 import { useHistory, Link } from "react-router-dom";
 import api from "../../api/HotelApi";
 import Btn from "../form/Btn";
 
 function AboutPet() {
   const [pets, setPets] = useState({});
-
   const history = useHistory();
 
   useEffect(() => {

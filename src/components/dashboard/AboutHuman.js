@@ -1,5 +1,4 @@
-import React from "react";
-import { useState, useEffect } from "react/cjs/react.development";
+import React,{ useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import api from "../../api/HotelApi";
 
@@ -39,8 +38,6 @@ function AboutHuman() {
     }
     fetchHuman();
   }, [history]);
-
-  console.log(humanState);
 
   return (
     <div className="sobre-humano">
