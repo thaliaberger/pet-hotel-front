@@ -66,3 +66,47 @@ p {
   justify-content: space-between;
   margin-top: 30px;
 }
+
+/* RESPONSIVIDADE */
+
+/* EXTRA SMALL */
+
+@media (max-width: 575px) and (orientation: portrait) {
+  .content {
+    width: 300px;
+    flex-direction: column;
+    padding: 30px 30px;
+  }
+
+  .content h3 {
+    font-size: 15px;
+  }
+
+  .content p {
+    font-size: 10px;
+  }
+  .booking-pet-pic img {
+    width: 100px;
+  }
+}
+
+/* SMALL */
+
+@media screen and (min-width: 575px) and (orientation: portrait) {
+  .content {
+    width: 300px;
+    flex-direction: column;
+    padding: 30px 30px;
+  }
+
+  .content h3 {
+    font-size: 15px;
+  }
+
+  .content p {
+    font-size: 10px;
+  }
+  .booking-pet-pic img {
+    width: 150px;
+  }
+}
