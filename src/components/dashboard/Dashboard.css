@@ -122,3 +122,55 @@
 .reserva-confirmada {
   padding-bottom: 25px;
 }
+
+/* RESPONSIVIDADE */
+
+/* EXTRA SMALL */
+
+@media (max-width: 575px) and (orientation: portrait) {
+  .dashboard {
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+  }
+  .dashboard h2 {
+    font-size: 20px;
+  }
+
+  .sobre-humano {
+    width: 200px;
+  }
+
+  .first-row {
+    flex-direction: column;
+  }
+
+  .all-pets {
+    flex-direction: column;
+  }
+}
+
+/* SMALL */
+
+@media screen and (min-width: 575px) and (orientation: portrait) {
+  .dashboard {
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+  }
+  .dashboard h2 {
+    font-size: 20px;
+  }
+
+  .sobre-humano {
+    width: 400px;
+  }
+
+  .first-row {
+    flex-direction: column;
+  }
+
+  .all-pets {
+    flex-direction: column;
+  }
+}

@@ -9,7 +9,7 @@ function Register() {
     <div>
       <LogoNavbar />
       <div className="container">
-        <div className="cadastro2">
+        <div className="cadastro3">
           <h2>Cadastre-se</h2>
           <FormRegister />
         </div>

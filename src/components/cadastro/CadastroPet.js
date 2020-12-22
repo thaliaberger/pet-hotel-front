@@ -1,5 +1,5 @@
 import React from "react";
-import "./Cadastro.css";
+import "./CadastroPet.css";
 
 import NewPet from "../form/NewPet";
 import LogoNavbar from "../dashboard/LogoNavbar";
@@ -9,7 +9,7 @@ function CadastroPet() {
     <div>
       <LogoNavbar />
       <div className="container">
-        <div className="cadastro2">
+        <div className="cadastro3">
           <h2>Perfil do Pet</h2>
           <NewPet />
         </div>

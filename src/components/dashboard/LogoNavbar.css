@@ -9,3 +9,13 @@
   height: 70px;
   margin-top: 20px;
 }
+
+/* RESPONSIVIDADE */
+
+/* EXTRA SMALL */
+
+@media (max-width: 575px) and (orientation: portrait) {
+  .logo2 {
+    height: 55px;
+  }
+}

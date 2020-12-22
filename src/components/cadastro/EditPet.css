@@ -4,29 +4,13 @@
   margin: 0 0;
 }
 
-.cadastro {
-  flex-direction: column;
-  width: 540px;
-  background-color: rgb(194, 221, 230, 0.4);
-  padding: 50px;
-  border-radius: 25px;
-}
-
-.cadastro2 {
+.cadastro3 {
   flex-direction: column;
   width: 540px;
   background-color: rgb(194, 221, 230, 0.4);
   padding: 30px 50px;
   border-radius: 25px;
   margin-top: 20px;
-}
-
-.cadastro input {
-  padding: 10px 0 10px 15px;
-  border: none;
-  margin: 5px;
-  width: 515px;
-  border-radius: 15px;
 }
 
 .botoes-cadastro {
@@ -45,15 +29,11 @@
   margin: 40px 70px;
 }
 
-.cadastro h2 {
+.cadastro3 h2 {
   color: #4995a6;
 }
 
-.cadastro2 h2 {
-  color: #4995a6;
-}
-
-.cadastro2 input {
+.cadastro3 input {
   padding: 10px 0 10px 15px;
   border: none;
   margin: 5px;
@@ -110,56 +90,54 @@ label {
 /* EXTRA SMALL */
 
 @media (max-width: 575px) and (orientation: portrait) {
-  .cadastro2 {
+  .cadastro3 {
     width: 270px;
     padding: 20px 40px;
   }
 
-  .cadastro2 input {
+  .cadastro3 input {
     width: 255px;
-    margin-left: 70px;
   }
 
-  .cadastro2 .select {
+  .cadastro3 .select {
     width: 270px;
-    margin-left: 70px;
   }
 
-  .cadastro2 h2 {
+  .cadastro3 h2 {
     font-size: 20px;
   }
 
   .radio-input-container {
+    width: 270px;
   }
 
   .radio-input img {
-    width: 50px;
+    width: 30px;
   }
 }
 
 /* SMALL */
 
 @media screen and (min-width: 575px) and (orientation: portrait) {
-  .cadastro2 {
-    width: 270px;
+  .cadastro3 {
+    width: 470px;
     padding: 20px 40px;
   }
 
-  .cadastro2 input {
-    width: 255px;
-    margin-left: 70px;
+  .cadastro3 input {
+    width: 455px;
   }
 
-  .cadastro2 .select {
-    width: 270px;
-    margin-left: 70px;
+  .cadastro3 .select {
+    width: 470px;
   }
 
-  .cadastro2 h2 {
+  .cadastro3 h2 {
     font-size: 20px;
   }
 
   .radio-input-container {
+    width: 470px;
   }
 
   .radio-input img {

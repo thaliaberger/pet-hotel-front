@@ -44,3 +44,39 @@
   flex-direction: row;
   align-items: center;
 }
+
+/* RESPONSIVIDADE */
+
+/* EXTRA SMALL */
+
+@media (max-width: 575px) and (orientation: portrait) {
+  .room-img {
+    width: 100px;
+    margin-right: 10px;
+  }
+
+  .container-accommodation {
+    width: 250px;
+  }
+
+  .container-accommodation-selected {
+    width: 250px;
+  }
+}
+
+/* SMALL */
+
+@media screen and (min-width: 575px) and (orientation: portrait) {
+  .room-img {
+    width: 130px;
+    margin-right: 10px;
+  }
+
+  .container-accommodation {
+    width: 250px;
+  }
+
+  .container-accommodation-selected {
+    width: 250px;
+  }
+}

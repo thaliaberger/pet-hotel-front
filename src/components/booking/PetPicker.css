@@ -18,3 +18,33 @@
   padding: 20px;
   border-radius: 25px;
 }
+
+/* RESPONSIVIDADE */
+
+/* EXTRA SMALL */
+
+@media (max-width: 575px) and (orientation: portrait) {
+  .container-petpicker {
+    width: 150px;
+    padding: 10px 0 0 0;
+  }
+
+  .container-petpicker-selected {
+    padding: 10px 0 0 0;
+    width: 150px;
+  }
+}
+
+/* SMALL */
+
+@media screen and (min-width: 575px) and (orientation: portrait) {
+  .container-petpicker {
+    width: 200px;
+    padding: 10px 0 0 0;
+  }
+
+  .container-petpicker-selected {
+    padding: 10px 0 0 0;
+    width: 200px;
+  }
+}

@@ -97,7 +97,7 @@ function EditPet(props) {
     <div>
       <LogoNavbar />
       <div className="container">
-        <div className="cadastro2">
+        <div className="cadastro3">
           <h2>Editar Pet</h2>
           <FormPet
             state={state}

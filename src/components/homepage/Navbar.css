@@ -26,3 +26,37 @@
 .show {
   display: block;
 }
+
+/* RESPONSIVIDADE */
+
+/* EXTRA SMALL */
+
+@media (max-width: 575px) and (orientation: portrait) {
+  .nav {
+    background-color: rgb(194, 221, 230, 1);
+  }
+
+  .nav-content {
+    justify-content: space-around;
+  }
+
+  .nav p {
+    margin-right: 0px;
+  }
+}
+
+/* SMALL */
+
+@media screen and (min-width: 575px) and (orientation: portrait) {
+  .nav {
+    background-color: rgb(194, 221, 230, 1);
+  }
+
+  .nav-content {
+    justify-content: space-around;
+  }
+
+  .nav p {
+    margin-right: 0px;
+  }
+}
